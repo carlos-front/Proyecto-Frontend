@@ -1,0 +1,28 @@
+{
+  "name": "clm-runner",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/teamusacd/"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/teamusacd/",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-multidest": "^1.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-zip": "^5.0.0"
+  },
+  "description": "CLM runner",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

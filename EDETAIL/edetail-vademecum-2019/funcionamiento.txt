@@ -1,0 +1,81 @@
+0.- Si alguna instrucción no se ejecuta correctamente en consola o lanza un error, volver a ejecuta desde la consola del sistema.
+
+1.- Instalar nodeJS
+    https://nodejs.org/es/
+
+2.- Instalar GraphicsMagick
+    http://www.graphicsmagick.org/download.html
+
+3.- Crear repositorio en BitBucket.
+
+4.- Clonarlo en local.
+
+5.- Copiar el contenido de clm_manager en la raiz del repositorio clonado.
+    P.ej:
+            - DirectorioClonadoGIT / dev
+            - DirectorioClonadoGIT / gulpfile.js
+            - DirectorioClonadoGIT / package.json
+            - DirectorioClonadoGIT / funcionamiento.txt            
+            - DirectorioClonadoGIT / _carpetas
+
+6.- Entrar en DirectorioClonadoGIT y ejecutar en consola:
+    npm install
+
+7.- La carpeta "dev" se utilizará para desarrollar el CLM.
+
+8.- Configurar out_of_veeva.js (dentro de la carpeta "dev") según el manifest del CLM.
+
+9.- La variable 'fileSystem' de gulpfile.js ahora obtiene el valor de 'oFlows' (JSON) automaticamente. 
+
+10.- Modificar la carpeta "_template" para crear la plantilla de Slides del CLM.
+     Modificar la carpeta "_template_popup" para crear la plantilla de Popups del CLM.
+     Añadir librerias en js/ o modificar estilos en css/
+     Customizar el archivo index.html
+     etc....
+
+11.- Ejecutar en consola:
+     gulp createSlides
+    
+    Esta task genera todas las presentaciones y sus KMs segun la variable 'fileSystem' (JSON).
+    Y copia el contenido de la carpeta "_template" o "_template_popup" dentro de su respectivo KM. Generando una estructura limpia para todos los slides.
+    OJO!! Esto sobreescribirá todos los KM en el caso de que ya se hubieran creado.
+    Cualquier modificación que se hubiera hecho en algun KM desaparecerá.
+    Los archivos que ya existan en un Slide y no estén en el "_template" no se sobreescribirán.
+
+12.- Apartir de aqui se puede empezar a trabajar sobre cada slide independientement.
+
+13.- Modificar cada slide según la navegación requerida en el manifest.
+
+14.- Tasks de Gulp:
+    - Al inicio del gulpfile.js hay un objeto JSON donde se configuran las opciones disponibles:
+        · devMainFolder : Nombre de la carpeta que contiene el clm. Se puede cambiar por cualquiera que queramos.
+        · prodFolder : Nombre de la carpeta que contentdrá el clm para subir a SalesForce/Veeva.
+        · sharedFolder : Nombre de la carpeta del recurso compartido. Puedes llamarse 'Assets' o el que queramos.
+        · bkgImage : Nombre con extensión de la imagen que se utilizará para realizar el thumbnail.
+        · thumbSize : Tamaño al que se creará el thumbnail.
+    
+    - gulp createSlides: 
+        Genera la estructura completa del CLM según el contenido de la carpeta "_template" o "_template_popup". Presentaciones y KeyMessages.
+
+    - gulp copyShared:
+        Esta tarea copia el contenido de la carpeta 'shared' en la raiz y la replica dentro de cada slide.
+
+    - gulp overwriteFile:
+        Esta tarea se ha creado para sobreescribir un archivo y replicarlo en todos los slides.
+        Sin tener que sobreescribir todo lo demás.
+        P.ej: Se puede crear un 'styles.css' con modificaciones del original, y sobreescribir el que hay dentro de cada slide.
+
+    - gulp addCustomCss:
+        Añade archivo custom_style a todos los slides.
+        
+    - gulp addCustomJs:
+        Añade archivo custom_scripts a todos los slides.
+
+    - gulp thumb:
+        Esta tarea genera todos los thumb.png según la configuración.
+
+    - gulp zipSlides:
+        Esta tarea genera todos los zips para subir a Veeva.
+
+    - gulp : 
+        Ejecuta la tarea "default" default de gulp.

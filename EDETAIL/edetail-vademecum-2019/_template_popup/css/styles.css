@@ -1,0 +1,270 @@
+/*************************************************  Internal Vertical pages  *************************************************/
+
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1024px;
+    height: 768px;
+    overflow: hidden;
+    background: #ffffff url('../images/bg.jpg') no-repeat top left / 100%;
+}
+
+.main-menu {
+    background: transparent url('../images/main-menu.jpg') no-repeat top center / 100%;
+}
+
+.btn_home.item-menu {
+    position: relative;
+    width: 49px;
+    height: 40px;
+}
+
+#divPopup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popupRounded {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #000000;
+}
+
+.openPopup {
+    position: absolute;
+    top: 22%;
+    right: 3%;
+    width: 90px;
+    height: 90px;
+}
+
+.closePopup {
+    position: absolute;
+    top: 8%;
+    right: 0;
+    width: 90px;
+    height: 90px;
+}
+
+.emailBtn {
+    position: absolute;
+    top: 345px;
+    left: 355px;
+    width: 290px;
+    height: 38px;
+}
+
+.nextSlide {
+    position: absolute;
+    top: 44%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+}
+
+.prevSlide {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 70px;
+    height: 70px;
+}
+
+/*************************************************  On screen console  *************************************************/
+
+.screenConsole {
+    margin: 50px auto;
+    padding: 20px;
+    background: lightgrey;
+    border-radius: 5px;
+    width: 96%;
+    position: relative;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.screenOpenBtn {
+    position: absolute;
+    left: 95%;
+    top: 20px;
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 17px;
+    opacity: .3;
+    border: 4px solid rebeccapurple;
+}
+
+.screenConsole h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.screenConsole .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.screenConsole .close:hover {
+    color: darkred;
+}
+
+.screenConsole .consoleContent {
+    max-height: 580px;
+    width: 95%;
+    overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre {
+    white-space: pre-line;
+    width: 300px;
+}
+
+.screenConsoleOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/*************************************************  Animations  *************************************************/
+
+.container {
+    animation: fadein 0.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -webkit-animation: fadein 0.5s;
+    /* Firefox < 16 */
+    -moz-animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.goDown {
+    opacity: 1;
+    display: block !important;
+    -webkit-transform: translateY(0);
+    -webkit-animation-duration: .6s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-name: goDownA;
+    transform: translateY(0);
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+    animation-name: goDownA;
+}
+
+@-webkit-keyframes goDownA {
+    from {
+        -webkit-transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.goLeft {
+    opacity: 1;
+    display: block !important;
+    -webkit-transform: translateX(0);
+    -webkit-animation-duration: .6s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-name: goLeftA;
+    transform: translateX(0);
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+    animation-name: goLeftA;
+}
+
+@-webkit-keyframes goLeftA {
+    from {
+        -webkit-transform: translateX(40px);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.comeFromFar {
+    display: block !important;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -webkit-animation-duration: .6s;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-name: comeFromFarA;
+    transform: scale3d(1, 1, 1);
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+    animation-name: comeFromFarA;
+}
+
+@-webkit-keyframes comeFromFarA {
+    from {
+        -webkit-transform: scale3d(.5, .5, 1);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+/*************************************************  Custom css  *************************************************/

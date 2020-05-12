@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+
+	</style>
+</head>
+
+<body data-swipe-prev="ES_ELO_00004_2019_4_Ed_Vadem_0180_Orgalutran_Administracion" data-swipe-next="next" id="">
+
+	<div id="background">
+		<!-- Caja principal-->
+
+		<div id="tick"></div> <!-- Caja con la imagen que te checkea si está visto el slide -->
+		<div id="tick1"></div>
+
+		<div id="openMenu" class="openPopup" data-popup="divPopup"></div>
+		<!-- DIV que si le das, te abre el menú(popUp) -->
+
+	</div>
+
+	<div id="divPopup" data-prevent-swipe="true" onclick="changeColor(event);">
+		<!-- Se abre una imagen de background cuando le das al openMenu -->
+		<div id="homeMenuText" class="menucolor component veeva-goto"
+			data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_010_Home"></div>
+		<div id="homeMenu"></div>
+		<div id="elonvaMenuText" class="menucolor component veeva-goto"
+			data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_030_Elonva_Presentaciones"></div>
+		<div id="elonvaMenu"></div>
+		<div id="puregonMenuText" class="menucolor component veeva-goto"
+			data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_080_Puregon_Presentaciones"></div>
+		<div id="puregonMenu"></div>
+		<div id="puregonPenMenuText" class="menucolor component veeva-goto"
+			data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_080_Puregon_Presentaciones"></div>
+		<div id="puregonPenMenu"></div>
+		<div id="orgalutranMenuText" class="menucolor component veeva-goto"
+			data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_080_Puregon_Presentaciones"></div>
+		<div id="orgalutranMenu"></div>
+
+		<div id="closepopUp" class="closePopup" data-prevent-swipe="true"></div> <!-- Cierra el popUp -->
+
+	</div>
+
+	<script src="js/inobounce.min.js"></script>
+	<script src="js/veeva-library.js"></script>
+	<script src="js/veeva-slides.js"></script>
+	<script src="js/veeva-approved.js"></script>
+	<script src="../../out_of_veeva.js"></script>
+
+	<script>
+
+		function changeColor(ev) {
+			document.getElementById(ev.target.id).style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+			console.log(ev);
+		}
+
+		var Slide = {
+
+			init: function () {
+
+				testCookie(com.usacd.slides.gsSlideName); //Obtenemos la slide actual en la que estamos
+				menuView();
+			}
+
+		}
+
+		function testCookie(actualSlide) { //com.usacd.slides.gsSlideName es "actualSlide"
+			var keyCookie = 'edetail-vademecum-2019' + com.usacd.slides.gsAccountId + '_KeyMViewed';
+			var getCookieName = JSON.parse(com.usacd.slides.getCookie(keyCookie));
+			var getNameSlide = actualSlide;
+			if (getCookieName != null) {
+				for (var testCookieName in getCookieName.viewedKM) {
+					if (testCookieName == getNameSlide) {
+						document.getElementById('tick1').style.display = "block";
+					}
+				}
+			}
+		}
+
+
+
+		function menuView() {
+			var openMenu = document.getElementById('openMenu'); //caputamos el click que se hace en el menu y lo guardamos en una variable
+
+			openMenu.addEventListener('click', function () { //Aqui aplicamos el click del menu
+				var menuList = document.getElementsByClassName('menucolor');
+				var keyCookie = 'edetail-vademecum-2019' + com.usacd.slides.gsAccountId + '_KeyMViewed';
+				var getCookieName = JSON.parse(com.usacd.slides.getCookie(keyCookie));
+				for (var i = 0; i < menuList.length; i++) { //Recorremos todos los dataset del menu (son 3)
+					var menuDataSet = menuList[i].dataset.gotoVeeva; //dataset guarda el valor de los data atribute del DOM
+					if (menuDataSet in getCookieName.viewedKM) {
+						menuList[i].classList.add("tick");
+					} // Mira si el dataset( los 3 del menu) del menu esta en el localStorage (viewedKM)
+				}
+
+
+
+			})
+		}
+
+
+
+
+	</script>
+</body>
+
+</html>

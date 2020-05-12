@@ -1,0 +1,237 @@
+/*************************************************  Internal Vertical pages  *************************************************/
+
+body {
+    padding:0px;
+    margin:0px;
+}
+#background{
+    top:0;
+    left:0;
+    width: 1024px;
+    height: 768px;
+    background-image:url('../images/content.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#bibliografia{
+    top:50px;
+    left:0;
+    width: 1024px;
+    height: 628px;
+    position: absolute;
+    overflow-x: hidden;
+}
+
+
+#tick{
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    height: 30px;
+    width: 30px;
+    background-image: url('../images/caja-cabecera.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#tick1{
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  height: 30px;
+  width: 30px;
+  background-image: url('../images/tick-cabecera.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menucolor.tick +div {
+  background-image: url('../images/tick1.png');
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+
+/*** MENU BOTTOM all the slides including the first ***/
+
+#bottomMenu{
+    width: 1024px;
+    height: 92px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+
+/*** MENU BOTTOM 1 slide ***/
+
+#menuSlide1 {
+    width: 336px;
+    height: 57px;
+    bottom: 17px;
+    left: 333px;
+    position: absolute;
+}
+.component{
+    width: 112px;
+    height: 57px;
+    position: relative;
+    float: left;
+}
+
+/*** POPUP CODE ***/
+#closePopupBiblio {
+  background:white url(../images/cruz.png) no-repeat center center/ 80%;  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 964px;
+  top: 62px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#openMenu{
+    position: absolute;
+    top: 10px;
+    right: 62px;
+    height: 30px;
+    width: 30px;
+    background-image: url("../images/menu-icon.png");
+    background-size: cover;
+}
+#divPopup{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1024px;
+    height: 768px;
+    display: none;
+    background-image: url("../images/menu.jpg");
+    background-size: cover;
+    transition: 0s !important;
+    z-index: 1;
+}
+.closePopup{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 52px;
+    height: 52px;
+}
+#prevalenciaVphText {
+  position: absolute;
+  left: 232px;
+  top: 296px;
+  width: 530px;
+  height: 56px;
+}
+.menucolor +div {
+  position: absolute;
+  left: 763px;
+  top: 310px;
+  background-image: url('../images/caja-vacia.png');
+  width:30px;
+  height:30px;
+}
+#persistenciaVphText {
+  position: absolute;
+  left: 231px;
+  top: 355px;
+  width: 530px;
+  height: 56px;
+}
+#persistenciaVph {
+  position: absolute;
+  left: 763px;
+  top: 372px;
+  width:30px;
+  height:30px;
+}
+#cargaEnfermedadText {
+  position: absolute;
+  left: 231px;
+  top: 415px;
+  width: 530px;
+  height: 56px;
+}
+#cargaEnfermedad {
+  position: absolute;
+  left: 763px;
+  top: 432px;
+  width:30px;
+  height:30px;
+}
+
+
+/*************************************************  On screen console  *************************************************/
+
+.screenConsole {
+    margin: 50px auto;
+    padding: 20px;
+    background: lightgrey;
+    border-radius: 5px;
+    width: 96%;
+    position: relative;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.screenOpenBtn {
+    position: absolute;
+    left: 95%;
+    top: 20px;
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 17px;
+    opacity: .3;
+    border: 4px solid rebeccapurple;
+}
+
+.screenConsole h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.screenConsole .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.screenConsole .close:hover {
+    color: darkred;
+}
+
+.screenConsole .consoleContent {
+    max-height: 580px;
+    width: 95%;
+    overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre {
+    white-space: pre-line;
+    width: 300px;
+}
+
+.screenConsoleOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/*************************************************  Custom css  *************************************************/

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+	<div id="background">
+		<!-- Caja principal-->
+		<div id="closePopupBiblio" class="veeva-goto">
+		</div>
+
+		<div id="bottomMenu">
+			<!-- footer -->
+
+			<div id="menuCookies">
+				<!-- Caja principal de las 3 cajas de abajo -->
+				<div id="menuSlide1">
+					<div class="component veeva-goto" data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_010_Home">
+					</div>
+					<div class="component veeva-goto" data-goto-veeva="ES_ELO_00004_2019_4_Ed_Vadem_0190_Bibliografia">
+					</div>
+					<div class="component veeva-goto" data-goto-veeva-presentation="FT Orgalutran"
+						data-goto-veeva="A_ESP_FT_Orgalutrán"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="js/inobounce.min.js"></script>
+	<script src="js/veeva-library.js"></script>
+	<script src="js/veeva-slides.js"></script>
+	<script src="js/veeva-approved.js"></script>
+	<script src="../../out_of_veeva.js"></script>
+
+	<script>
+
+		function changeColor(ev) {
+			document.getElementById(ev.target.id).style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+		}
+
+		var Slide = {
+
+			init: function () {
+
+				var keyCookie = 'edetail-vademecum-2019' + com.usacd.slides.gsAccountId + '_KeyMViewed';
+				var getCookieName = JSON.parse(com.usacd.slides.getCookie(keyCookie)).lastKM;
+
+				if (getCookieName != 'ES_ELO_00004_2019_4_Ed_Vadem_0190_Bibliografia') {
+					com.usacd.slides.setCookie("cookieBiblio", getCookieName);
+				}
+				document.getElementById("closePopupBiblio").dataset.gotoVeeva = localStorage.getItem('cookieBiblio');
+			}
+		}
+
+
+	</script>
+</body>
+
+</html>

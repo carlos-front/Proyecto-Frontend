@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body data-swipe-prev="prev" data-swipe-next="next" id="">
+
+	<div class="container">
+		<div class="main-menu">
+			<div class="btn_home item-menu veeva-goto" data-goto-veeva="slide_home">
+			</div>
+		</div>
+
+		<!-- Popup -->
+		<div id="popUpID" class="openPopup" data-popup="divPopup"></div>
+		<div id="divPopup">
+			<div class="popupRounded">This is a popup</div>
+			<div class="closePopup" data-prevent-swipe="true"></div>
+		</div>
+
+		<!-- Approved email -->
+		<div class="emailBtn" id="sendBtn"></div>
+	</div>
+
+	<script src="js/inobounce.min.js"></script>
+	<script src="js/veeva-library.js"></script>
+	<script src="js/veeva-slides.js"></script>
+	<script src="js/veeva-approved.js"></script>
+	<script src="../../out_of_veeva.js"></script>
+
+	<script>
+		var Slide = {
+			init: function () { }
+		}
+	</script>
+
+</body>
+
+</html>
