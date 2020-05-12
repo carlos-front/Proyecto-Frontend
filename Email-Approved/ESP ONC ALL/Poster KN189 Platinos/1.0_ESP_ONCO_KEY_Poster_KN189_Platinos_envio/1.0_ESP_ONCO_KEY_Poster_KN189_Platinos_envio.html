@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="divHeader">
+        <div id="square2"></div>
+        <div id="square1" class="color" style="background-color: #49485c;"></div>
+    </div>
+    <div id="divText">
+        <p id="texto">Enviar enlace de descarga del artículo por e-mail</p>
+    </div>
+    <div id="divSend">
+        <button id="idButton" class="color" style="background-color: #8EB444;">ENVIAR</button>
+    </div>
+    <script type="text/javascript">
+
+        var Slide = {
+            init: function () {
+                $.getElement('idButton').addEventListener($.EVENT_DOWN, LaunchEmail);
+            }
+        };
+
+        function LaunchEmail() {
+            var mail = '';
+            var sSubject = 'KN189:Does Choice of Platinum Affect Outcomes?';
+            var sIntro = 'Estimado/a Doctor/a,<br>Acceda a la descarga del Poster KN189: Does Choice of Platinum Affect Outcomes? - ESMO 2018 in Metastatic Non–Small-Cell Lung Cancer mediante el siguiente enlace:<br><br>';
+            var sSignature = '<br><br>Atentamente,<br><br>MSD<br><br><hr><br><p style="font-size:11px;">Este email ha sido enviado con carácter personal como usuario de MSD Profesionales Sanitarios, en caso de que lo reenvíe, será bajo su responsabilidad. Si lo ha recibido por error le agradecemos que nos lo notifique. <br> Si quiere dejar de recibir notificaciones de correo por parte de MSD Profesionales Sanitarios, comuníquenoslo a través de privacidad@merck.com <br> Le recordamos que MSD Profesionales Sanitarios es un portal para usuarios registrados que ofrece formación, información y servicios relacionados con las patologías y productos de MSD y que como usuario del mismo, Ud.tiene la ventaja de acceder a los diferentes recursos, servicios y novedades terapéuticas. <br> MSD® es una marca registrada de Merck Sharp & Dohme Corp., una subsidiaria de Merck & Co., Inc., Kenilworth, NJ, USA.Copyright © 2019 Todos los derechos reservados.www.msd.es Merck Sharp & Dohme de España, S.A.C / Josefa Valcárcel, 38. 28027 - Madrid.</p>';
+            var sUrl = 'https://microsites.msd.es/keytruda/KN189_Rodriguez_Abreu_Platinum_ESMO_2018.pdf?etatoken={{Account.MSD_CORE_WP_Token__c}}';
+            try {
+            // Get token
+            com.veeva.clm.getDataForCurrentObject('Account', 'MSD_CORE_WP_Token__c', getAccountToken);
+            function getAccountToken(poResult) {
+                if (poResult.success) {
+                    //Get mail
+                    sUrl = sUrl.replace('{{Account.MSD_CORE_WP_Token__c}}', poResult.Account.MSD_CORE_WP_Token__c);
+                    com.veeva.clm.getDataForCurrentObject('Account', 'Id', getAccountID);
+                } else {
+                    alert('Seleccione una cuenta');
+                }
+            }
+
+            function getAccountID(poResultAccountId) {
+                if (poResultAccountId.success) {
+                    com.veeva.clm.queryRecord('Multichannel_Consent_vod__c', ['Channel_Value_vod__c'], 'WHERE Account_vod__c = \'' + poResultAccountId.Account.Id + '\' AND Opt_Type_vod__c = \'Opt_In_vod\'', [], '1', getMultiChannelConsent);
+                } else {
+                    alert('No AccountID');
+                }
+            }
+
+            function getMultiChannelConsent(poMultichannelConsentChannelValue) {
+                if (poMultichannelConsentChannelValue.Multichannel_Consent_vod__c.length === 0) {
+                    alert('Este Profesional sanitario no dispone de consentimiento');
+                    mail = '';
+                } else {
+                    mail = poMultichannelConsentChannelValue.Multichannel_Consent_vod__c[0].Channel_Value_vod__c;
+                }
+
+                window.location.href = 'mailto:' + encodeURIComponent(mail) + '?subject=' + encodeURIComponent(sSubject) + '&body=' + encodeURIComponent(sIntro + sUrl + sSignature);
+            }
+
+        } catch (e) {
+                alert('Seleccione una cuenta');
+            }
+        }
+    </script>
+
+    <script src="js/inobounce.min.js"></script>
+    <script src="js/veeva-library.js"></script>
+    <script src="js/veeva-slides.js"></script>
+</body>
+
+</html>

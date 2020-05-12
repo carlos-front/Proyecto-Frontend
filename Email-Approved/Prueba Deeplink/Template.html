@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<table>
+	<tr>
+		<td><h3>Prueba de Template para Fragment de Deeplink</h3></td>
+	</tr>
+
+	<tr>
+	</tr>
+	<tr>
+		<td>User name: {{userName}}<br>
+			User email: {{userEmailAddress}}<br>
+			User photo: {{userPhoto}}<br>
+			Account first name: {{accFname}}<br>
+			Account last name: {{accLname}}<br><br>
+
+			Combo: <p>{{customText[Hola|Buenos dias|Buenas tardes|Apreciado Sr.|Apreciada Sra.| Estimado Dr.|Estimada Dra.]}} {{accLname}}</p>
+			Textfield: <p>{{customText(128|Nombre del Evento)}}</p>
+			Rich text: <p>{{customRichText(600|Queremos agradecerle en nombre de Boehringer Ingelheim su asistencia a la reunión:)}}</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://profesionales.msd.es/medicos/recursos_profesionales/profesional-3-0.xhtml?docId=2104&utm_source=veeva&utm_medium=email&utm_campaign=sunday_digest&project=sunday_digest&p_type=apps_generales&p_title=drivemode&etatoken=%%=v(@autoLoginStr)=%%">MSD GA</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://profesionales.msd.es/farmacia/recursos_profesionales/profesional-3-0.xhtml?docId=2104&utm_campaign=sunday_digest&utm_source=veeva&utm_medium=email&utm_content=sunday_digest&project=sunday_digest&p_type=apps_generales&p_title=drivemode&etatoken=%%=v(@autoLoginStr)=%%">MSD GA2</a>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#f5f5f5">
+			<table>
+				{{insertEmailFragments}}
+			</table>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

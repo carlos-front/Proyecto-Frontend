@@ -1,0 +1,551 @@
+/*************************************************  Editar color template *************************************************/
+.color{
+	background-color:#075794;
+}
+
+
+
+
+/*************************************************  Style *************************************************/
+
+#divHeader
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1024px;
+	height: 37px;
+}
+
+
+#divText
+{
+	position: absolute;
+	left: 256px;
+	height: 32px;
+	top: 255px;
+}
+
+
+#divSend
+{
+	position: absolute;
+	left: 420px;
+	width: 192px;
+	height: 55px;
+	top: 396px;
+	cursor: pointer;
+}
+
+
+
+#square1{
+	width: 1024px;
+	height: 37px;
+}
+#square2{
+	width: 1024px;
+	height: 17px;
+	background-color:white;
+	opacity: 0.15;
+	position: absolute;
+}
+#texto{
+	font-family: sans-serif;
+	font-size: 22.5px;
+	font-weight: 800;
+	text-align: center;
+	color: #0c355c;
+	margin: 0;
+}
+#idButton{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	width: 196px;
+	height: 55px;
+}
+
+
+
+
+/*************************************************  Internal Vertical pages  *************************************************/
+#sectionContainer
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1024px;
+	height: 768px;
+	overflow: hidden;
+}
+
+#section
+{
+	position: absolute;
+	width: 1024px;
+	height: auto;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: .6s;
+}
+
+#section .page
+{
+	position: absolute;
+	left: 0;
+}
+
+#section .page:nth-child(1)
+{
+	top: 0px;
+}
+
+#section .page:nth-child(2)
+{
+	top: 768px;
+}
+
+#section .page:nth-child(3)
+{
+	top: 1536px;
+}
+
+#section .page:nth-child(4)
+{
+	top: 2304px;
+}
+
+#section .page:nth-child(5)
+{
+	top: 3072px;
+}
+
+#section .page:nth-child(6)
+{
+	top: 3840px;
+}
+
+#section .page:nth-child(7)
+{
+	top: 4608px;
+}
+
+#section .page:nth-child(8)
+{
+	top: 5376px;
+}
+
+#section .page:nth-child(9)
+{
+	top: 6144px;
+}
+
+#section .page:nth-child(10)
+{
+	top: 6912px;
+}
+
+/*************************************************  Internal Horizontal pages  *************************************************/
+#horizontalSection
+{
+	position: absolute;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: .6s;
+}
+
+#horizontalSection .horizontalPage
+{
+	position: absolute;
+	top: 0;
+}
+
+#horizontalSection .horizontalPage:nth-child(1)
+{
+	left: 0px;
+}
+
+#horizontalSection .horizontalPage:nth-child(2)
+{
+	left: 1024px;
+}
+
+#horizontalSection .horizontalPage:nth-child(3)
+{
+	left: 2048px;
+}
+
+#horizontalSection .horizontalPage:nth-child(4)
+{
+	left: 3074px;
+}
+
+#horizontalSection .horizontalPage:nth-child(5)
+{
+	left: 4093px;
+}
+
+#horizontalSection .horizontalPage:nth-child(6)
+{
+	left: 5120px;
+}
+
+#horizontalSection .horizontalPage:nth-child(7)
+{
+	left: 6144px;
+}
+
+#horizontalSection .horizontalPage:nth-child(8)
+{
+	left: 7168px;
+}
+
+#horizontalSection .horizontalPage:nth-child(9)
+{
+	left: 8192px;
+}
+
+#horizontalSection .horizontalPage:nth-child(10)
+{
+	left: 9216px;
+}
+
+/*************************************************  On screen console  *************************************************/
+.screenConsole
+{
+	margin: 50px auto;
+	padding: 20px;
+	background: lightgrey;
+	border-radius: 5px;
+	width: 96%;
+	position: relative;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.screenOpenBtn
+{
+	position: absolute;
+	left: 95%;
+	top: 20px;
+	background-color: aqua;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 17px;
+	opacity: .3;
+	border: 4px solid rebeccapurple;
+}
+
+.screenConsole h2
+{
+	margin-top: 0;
+	color: #333;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 20px;
+}
+
+.screenConsole .close
+{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+.screenConsole .close:hover
+{
+	color: darkred;
+}
+
+.screenConsole .consoleContent
+{
+	max-height: 580px;
+	width: 95%;
+	overflow: auto;
+	overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
+}
+
+pre
+{
+	white-space: pre-line;
+	width: 300px;
+}
+
+.screenConsoleOverlay
+{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+/*************************************************  Animations  *************************************************/
+
+.goDown
+{
+	opacity: 1;
+	display: block !important;
+	-webkit-transform: translateY(0);
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-name: goDownA;
+	transform: translateY(0);
+	animation-duration: .6s;
+	animation-timing-function: ease-out;
+	animation-name: goDownA;
+}
+
+@-webkit-keyframes goDownA
+{
+	from
+	{
+		-webkit-transform: translateY(-20px);
+		opacity: 0;
+	}
+	to
+	{
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.goLeft
+{
+	opacity: 1;
+	display: block !important;
+	-webkit-transform: translateX(0);
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-name: goLeftA;
+	transform: translateX(0);
+	animation-duration: .6s;
+	animation-timing-function: ease-out;
+	animation-name: goLeftA;
+}
+
+@-webkit-keyframes goLeftA
+{
+	from
+	{
+		-webkit-transform: translateX(40px);
+		opacity: 0;
+	}
+	to
+	{
+		-webkit-transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.comeFromFar
+{
+	display: block !important;
+	opacity: 1;
+	-webkit-transform: scale3d(1, 1, 1);
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-name: comeFromFarA;
+	transform: scale3d(1, 1, 1);
+	animation-duration: .6s;
+	animation-timing-function: ease-out;
+	animation-name: comeFromFarA;
+}
+
+@-webkit-keyframes comeFromFarA
+{
+	from
+	{
+		-webkit-transform: scale3d(.5, .5, 1);
+		opacity: 0;
+	}
+	to
+	{
+		-webkit-transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+}
+
+/*************************************************  Custom css  *************************************************/
+.btn_home
+{
+	position: absolute;
+	cursor: pointer;
+	left: 145px;
+	top: 9px;
+}
+
+#sld_name_footer
+{
+	position: absolute;
+	left: 0px;
+	top: 746px;
+}
+
+#sld_name_header
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#sld_name_title
+{
+	position: absolute;
+	left: 96px;
+	top: 132px;
+	display: none;
+}
+
+#sld_name_boxTitle01
+{
+	position: absolute;
+	left: 132px;
+	top: 186px;
+	display: none;
+}
+
+#sld_name_boxTitle02
+{
+	position: absolute;
+	left: 498px;
+	top: 187px;
+	display: none;
+}
+
+#sld_name_boxTitle03
+{
+	position: absolute;
+	left: 132px;
+	top: 443px;
+	display: none;
+}
+
+#sld_name_boxTitle04
+{
+	position: absolute;
+	left: 498px;
+	top: 443px;
+	display: none;
+}
+
+#sld_name_box01
+{
+	position: absolute;
+	left: 88px;
+	top: 264px;
+	display: none;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+
+#sld_name_box02
+{
+	position: absolute;
+	left: 508px;
+	top: 282px;
+	display: none;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+
+#sld_name_box03
+{
+	position: absolute;
+	left: 88px;
+	top: 542px;
+	display: none;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+
+#sld_name_box04
+{
+	position: absolute;
+	left: 618px;
+	top: 565px;
+	display: none;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+
+#sld_name_box05
+{
+	position: absolute;
+	left: 400px;
+	top: 400px;
+	display: none;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+}
+
+#divPopup
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1024px;
+	height: 768px;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popupRounded
+{
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	width: 874px;
+	height: 618px;
+	border-radius: 40px;
+	background-color: azure;
+	font-size: 50px;
+	font-family: Arial Black, Gadget, sans-serif;
+	padding: 50px 0 0 50px;
+}
+
+.closePopup
+{
+	position: absolute;
+	left: 920px;
+	top: 80px;
+	width: 43px;
+	height: 43px;
+	background-image: url("../media/images/closePopup.png");
+}
+
+.emailBt
+{
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	background: url(../media/images/emailBt.png) no-repeat;
+	background-size: contain;
+	-webkit-transform: scale3d(1, 1, 1);
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-name: emailBtA;
+	opacity: 0;
+}
+
+@-webkit-keyframes emailBtA
+{
+	from
+	{
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+	}
+	to
+	{
+		transform: scale3d(1.5, 1.5, 1);
+		opacity: 0;
+	}
+}
