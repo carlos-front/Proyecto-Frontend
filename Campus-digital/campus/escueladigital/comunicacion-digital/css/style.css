@@ -1,0 +1,410 @@
+
+
+/* ======================================================================
+	Layout
+======================================================================== */
+
+body {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.42857;
+}
+
+h2{
+  font-size:1.7rem;
+}
+/*
+.content {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1024px;
+  position: relative; }
+*/
+
+/* ======================================================================
+	Header
+======================================================================== */
+header {
+  background-color: #0082CA;
+  height: 49px; }
+
+  .header__logo {
+    float: left;
+    margin-top: 14px;
+    }
+
+.lang {
+  color: #FFF;
+  font-size: 0.875rem;
+  float: right;
+  position: relative;
+  margin-top: 15px; }
+  .lang span {
+    cursor: pointer;
+    background-image: url("../../img/logos_iconos/icon-arrow-lang.png");
+    background-position: 100% 4px;
+    background-repeat: no-repeat;
+    padding-right: 20px; }
+  .lang a {
+    color: #000;
+    text-decoration: none; }
+    .lang a.active {
+      font-weight: 700; }
+  .lang ul {
+    position: absolute;
+    z-index: 10;
+    background-color: #FFF;
+    padding: 10px;
+    top: 21px;
+    right: -3px;
+    display: none;
+    list-style: none; }
+
+  .img-destacada{
+    width:100%;
+    }
+  .img-destacada-play{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    }
+.breadcrumb{
+  background-color: #fff;
+  padding:0;
+}
+.breadcrumb a{
+  text-decoration:none;
+  color: #0082CA;
+}
+.breadcrumb a:before{
+  content: url("../../img/logos_iconos/breadcrumb-arrow.png");
+  margin-right:10px;
+}
+.campus{
+    margin: 5px 0 20px 0;
+}
+
+.img-video-container{
+  position: relative;
+  max-height: 383px;
+  box-shadow: 2px 4px 26px 1px #243565;
+  overflow: hidden;
+  margin-bottom: 35px;
+  background-color: black;
+}
+    /* ======================================================================
+	VISION DIGITAL
+======================================================================== */
+.vision-digital-container{
+  padding:0;
+  margin:0 auto;
+}
+h1{
+  margin: .67em 0 .20em 0;
+  font-weight: 500;
+}
+
+hr {
+  width: 2rem;
+  background-color: #006DFF;
+  height: 0.2rem;
+  border: none;
+}
+.btn-acceder{
+  color: #FFF;
+  font-size: 0.875rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #0082CA;
+  display: block;
+  margin: 10px 20px 10px 10px;
+  padding: 10px 15px;
+  float: right;
+  font-weight: 600;
+}
+.btn-digitalizate{
+  color: #FFF;
+  font-size: 0.875rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #0082CA;
+  display: block;
+  margin: 10px;
+  margin-right:40px;
+  padding: 10px 25px;
+  float: right;
+}
+/* Plus befoe Digital en Visión digital*/
+.digital:before{
+  content: url("../../img/logos_iconos/+_2.png");
+
+}
+
+#vision-digital {
+  text-align: center;
+}
+#vision-digital .content{
+  margin: 40px auto;
+}
+
+/* ======================================================================
+	Infografia
+======================================================================== */
+.infografia{
+  padding:0;
+}
+.infografia div{
+  margin-top:50px;
+  text-align: center;
+}
+.infografia img {
+  width:80%;
+
+}
+
+/* ======================================================================
+	Contenido
+======================================================================== */
+#contenido{
+  margin-left: 6%;
+}
+
+.contenido-item{
+  margin:40px auto;
+}
+.number-container{
+  width:30px;
+  height:30px;
+  color:#fff;
+  padding:10px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+ul {
+  color: #006DFF;
+  margin:20px 0 0 55px;
+}
+li p{
+  color:#000;
+  margin:10px 0;
+}
+
+.circulo1{
+  background-color:#E0521B;
+  position:relative;
+}
+.circulo2{
+  background-color:#A433B2;
+  position:relative;
+}
+.circulo3{
+  background-color:#2B9C49;
+  position:relative;
+}
+.circulo4{
+  background-color:#602345;
+  position:relative;
+}
+.circulo5{
+  background-color:#BC082D;
+  position:relative;
+}
+.circulo6{
+  background-color:#AAD23D;
+  position:relative;
+}
+.circulo7{
+  background-color:#E0137A;
+  position:relative;
+}
+.circulo8{
+  background-color:#777777;
+  position:relative;
+}
+.contenido__title{
+  margin:0;
+}
+.number{
+  position: absolute;
+  top: 5px;
+}
+.uno{
+color:#E0521B;
+}
+
+.dos{
+  color:#A433B2;
+}
+.tres{
+  color:#2B9C49;
+}
+.cuatro{
+  color:#602345;
+}
+.cinco{
+  color:#BC082D;
+}
+.seis{
+  color:#AAD23D;
+}
+.siete{
+  color:#E0137A;
+}
+.ocho{
+  color:#777777;
+}
+ul.indented-item {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+}
+.indented-item li:before {
+    content: "-";
+    position:absolute;
+    margin-left: -1em;
+}
+/* ======================================================================
+	Profesores
+======================================================================== */
+#profesores{
+  margin-bottom: 50px;
+}
+.profesores-container{
+  margin-left: -25px;
+}
+
+.profe-pic{
+  width: 100%;
+}
+
+.profesores-card h3{
+  color: #0082CA;
+  margin: 20px 0 0 0;
+  font-size: 1.2rem;
+}
+
+.profesores-card p{
+  font-size:0.9rem;
+  margin:0;
+}
+
+.profe-info{
+  margin-top:20px;
+}
+
+.profe-info img{
+  margin-top:10px;
+}
+
+
+.blocks__link-accede {
+  text-decoration: none;
+  color: #0082CA;
+  border: 1px solid #0082CA;
+  line-height: 20px;
+  text-align: center;
+  float: right;
+  padding: 10px 20px;
+  min-width: 120px;
+  font-size: 0.9rem;
+  margin: 0 50px 0 20px;
+  font-weight: 600;
+
+    }
+  .blocks__link-accede:hover {
+      text-decoration: underline; }
+
+  .btn-container {
+    padding: 35px 0px 35px 0px;
+}
+/* ======================================================================
+	Footer
+======================================================================== */
+footer {
+  color: #999;
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 5px;
+  margin: 30px auto;
+  text-align: center;
+}
+  footer .border-line {
+    border-top: 3px solid #777;
+    width:98%;
+  }
+
+  .border-line p {
+    margin-top:20px;
+    line-height: 1;
+  }
+  /* ======================================================================
+	Responsive
+======================================================================== */
+@media only screen and (max-width: 480px){
+  body{
+    font-size: 1em;
+  }
+  .infografia img{
+    width:100%;
+    height: auto;
+  }
+  .contenido__title{
+    font-size:1.2rem;
+  }
+  ul{
+    margin: 5px auto;
+  }
+  .profesores-card h3 {
+    font-size:1.7rem;
+  }
+#profe-info{
+  text-align: center;
+}
+
+  .profesores-container {
+    margin-left:0;
+  }
+  .btn-container {
+    margin:40px auto;
+    text-align: center;
+  }
+  .blocks__link-accede{
+    float:none;
+    margin:20px auto;
+
+  }
+  .border-line p {
+    margin-top: 20px;
+    line-height: 1.2rem;
+    text-align: center;
+  }
+
+ .contenido__subtitle{
+    flex-wrap: nowrap;
+  }
+
+}
+
+@media (max-width: 1200px){
+  .profe-info {
+    margin-top: 0;
+  }
+.contenido__subtitle {
+     flex-wrap: nowrap;
+   }
+
+  }
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1024px;
+}
+.contenido__subtitle {
+   flex-wrap: nowrap;
+ }
+}

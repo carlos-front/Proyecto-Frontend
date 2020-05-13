@@ -1,0 +1,230 @@
+/* ======================================================================
+	  Block
+	======================================================================== */
+
+
+$font-size-text:                    15px;
+$font-size-first-text-second:       24px;
+$font-size-ok:                      31px;
+$font-size-preparados-title:        48px;
+$font-size-preparados-num:          31px;
+$font-size-puedes-title:            31px;
+$font-size-saca-sub-title:          24px;
+$font-size-saca-sub-title-num:      31px;
+
+
+
+.block {
+  position: absolute;
+  z-index: map-get($zindex, block-home);
+}
+
+.first-text {
+  @include rem(font-size, $font-size-text);
+  text-align: center;
+  margin-left: -300px;
+  width: 600px;
+  p {
+    line-height: 1.6;
+    margin: 0 0 30px;
+  }
+  &__second {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-first-text-second);
+    line-height: 1.4 !important;
+    text-align: left;
+    margin-left: 150px !important;
+    width: 430px;
+  }
+}
+
+.ok {
+  font-family: 'Roboto Condensed', sans-serif;
+  @include rem(font-size, $font-size-ok);
+  text-transform: uppercase;
+  width: 690px;
+  p {
+    margin: 0;
+  }
+}
+
+.preparados {
+  @include rem(font-size, $font-size-text);
+  width: 350px;
+  h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    @include rem(font-size, $font-size-preparados-title);
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+  }
+  &__arrow {
+    text-transform: uppercase;
+    p {
+      margin: 0 0 9px 35px;
+    }
+  }
+  a {
+    color: $color-third-brand;
+    text-decoration: underline;
+  }
+  li {
+    span {
+      font-family: 'Roboto Condensed', sans-serif;
+      @include rem(font-size, $font-size-preparados-num);
+      float: left;
+    }
+    p {
+      float: none;
+      margin: 0;
+      padding: 17px 0 20px 40px;
+    }
+  }
+}
+
+.puedes {
+  @include rem(font-size, $font-size-text);
+  width: 350px;
+  h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    @include rem(font-size, $font-size-puedes-title);
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+  }
+  p {
+    margin: 0 0 30px;
+  }
+}
+
+
+.perfiles {
+  @include rem(font-size, $font-size-text);
+  text-align: center;
+  margin-left: -390px;
+  width: 780px;
+  h2 {
+    color: $color-secundary-brand;
+    font-family: 'Roboto Condensed', sans-serif;
+    @include rem(font-size, $font-size-preparados-title);
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+  }
+  p {
+    color: $color-secundary-brand;
+    margin: 0 0 30px;
+  }
+  table {
+    background: $color-secundary-brand;
+  }
+  td {
+    background: #E6E5D8;
+  }
+  a {
+    color: $color-third-brand;
+    text-decoration: underline;
+  }
+}
+
+.saca {
+  @include rem(font-size, $font-size-text);
+  margin-left: -330px;
+  width: 660px;
+  h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    @include rem(font-size, $font-size-preparados-title);
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 50px;
+  }
+  h3 {
+    @include rem(font-size, $font-size-saca-sub-title);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    span {
+      @include rem(font-size, $font-size-saca-sub-title-num);
+    }
+  }
+  p {
+    margin: 0;
+  }
+  a {
+    color: $color-third-brand;
+    text-decoration: underline;
+  }
+  li {
+    margin-bottom: 85px;
+    width: 460px;
+    img {
+      vertical-align: middle;
+    }
+  }
+  .two,
+  .four,
+  .six,
+  .eight,
+  .ten {
+    margin-left: 165px;
+  }
+  .one {
+    margin-bottom: 90px;
+  }
+  .four {
+    margin-bottom: 100px;
+    width: 485px;
+  }
+  .six {
+    width: 510px;
+  }
+  .seven {
+    margin-bottom: 65px;
+  }
+  .nine {
+    margin-bottom: 70px;
+  }
+  .three {
+    width: 485px;
+    span {
+      border-bottom: 1px solid $color-primary-brand;
+      img {
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+
+#first-text {
+  left: 50%;
+  top: 370px;
+}
+
+#ok {
+  left: 135px;
+  top: 822px;
+}
+
+#preparados {
+  left: 520px;
+  top: 1021px;
+}
+
+#puedes {
+  left: 130px;
+  top: 1717px;
+}
+
+#perfiles {
+  left: 50%;
+  top: 2465px;
+}
+
+#saca {
+  left: 50%;
+  top: 3160px;
+}

@@ -1,0 +1,261 @@
+/* ======================================================================
+	  Box Home
+	======================================================================== */
+
+
+$font-size-point-block-home:         52px;
+$font-size-title-block-home:         28px;
+$font-size-text-block-home:          14px;
+
+$arrow-box-home-left:                "../img/arrow-box-home-left.png";
+$arrow-box-home-right:               "../img/arrow-box-home-right.png";
+$point-box-home:                     "../img/circle-point.png";
+$first-car:                          "../img/first-car.png";
+$second-car:                         "../img/second-car.png";
+$third-car:                          "../img/third-car.png";
+$truck:                              "../img/truck.png";
+$cloud-big:                          "../img/cloud-big.png";
+$cloud-middle:                       "../img/cloud-middle.png";
+$cloud-small:                        "../img/cloud-small.png";
+
+
+.block-home {
+  position: absolute;
+  z-index: map-get($zindex, block-home);
+  &__point {
+    color: $color-secundary-brand;
+    @include rem(font-size, $font-size-point-block-home);
+    font-weight: 700;
+    line-height: 74px;
+    text-align: center;
+    background-image: url($point-box-home);
+    background-position: center center;
+    height: 74px;
+    width: 74px;
+    float: left;
+    &--type-point-right {
+      float: right;
+    }
+  }
+  &__box {
+    background-image: url($arrow-box-home-left);
+    background-position: 0 20px;
+    background-repeat: no-repeat;
+    margin-left: 90px;
+    padding-left: 15px;
+    width: 290px;
+    &--type-point-right {
+      background-image: url($arrow-box-home-right);
+      margin-left: 0;
+      margin-right: 90px;
+      padding-left: 0;
+      padding-right: 15px;
+      background-position: 100% 20px;
+    }
+  }
+  &__content {
+    background-color: $color-secundary-brand;
+    padding: 10px 20px 20px;
+  }
+  h2 {
+    @include rem(font-size, $font-size-title-block-home);
+    margin: 0 0 2px;
+  }
+  p {
+    @include rem(font-size, $font-size-text-block-home);
+    margin: 0 0 10px;
+  }
+  a {
+    color: $color-primary-brand;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#busca {
+  left: 8%;
+  top: 344px;
+}
+
+#contacta {
+  right: 8%;
+  top: 1036px;
+}
+
+#encuentra {
+  left: 8%;
+  top: 1529px;
+}
+
+#organiza {
+  right: 8%;
+  top: 2669px;
+}
+
+#comparte {
+  left: 8%;
+  top: 3249px;
+}
+
+#almacena {
+  right: 8%;
+  top: 3799px;
+}
+
+#comunica {
+  left: 8%;
+  top: 4834px;
+}
+
+#traduce {
+  right: 8%;
+  top: 5604px;
+}
+
+#recuerda {
+  left: 8%;
+  top: 6194px;
+}
+
+#imprime {
+  right: 8%;
+  top: 6974px;
+}
+
+.first-car {
+  background-image: url($first-car);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 275px;
+  //top: 252px;
+  top: 197px;
+  overflow: hidden;
+  height: 123px;
+  width: 168px;
+  z-index: map-get($zindex, car);
+}
+
+.second-car {
+  background-image: url($second-car);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: -49px;
+  left: 50%;
+  //top: 2550px;
+  top: 2494px;
+  overflow: hidden;
+  height: 200px;
+  width: 107px;
+  z-index: map-get($zindex, car);
+}
+
+.third-car {
+  background-image: url($third-car);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 344px;
+  //top: 8184px;
+  top: 8129px;
+  overflow: hidden;
+  height: 89px;
+  width: 161px;
+  z-index: map-get($zindex, car);
+}
+
+.truck {
+  background-image: url($truck);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: -49px;
+  left: 59%;
+  //top: 4290px;
+  top: 4234px;
+  overflow: hidden;
+  height: 276px;
+  width: 126px;
+  z-index: map-get($zindex, car);
+}
+
+.cloud {
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  z-index: map-get($zindex, clouds);
+
+  &__big {
+    background-image: url($cloud-big);
+    height: 289px;
+  }
+
+  &__middle {
+    background-image: url($cloud-middle);
+    height: 163px;
+  }
+
+  &__small {
+    background-image: url($cloud-small);
+    height: 83px;
+  }
+}
+
+#cloud-contacta-1 {
+  top: 1000px;
+}
+#cloud-contacta-2 {
+  top: 1150px;
+}
+#cloud-localiza-1 {
+  top: 1500px;
+}
+#cloud-localiza-2 {
+  top: 1600px;
+}
+#cloud-agenda-1 {
+  top: 2600px;
+}
+#cloud-agenda-2 {
+  top: 2650px;
+}
+#cloud-comparte-1 {
+  top: 3000px;
+}
+#cloud-comunica-1 {
+  top: 4300px;
+}
+#cloud-comunica-2 {
+  top: 5200px;
+}
+#cloud-traduce-1 {
+  top: 5500px;
+}
+#cloud-traduce-2 {
+  top: 5550px;
+}
+#cloud-recuerda-1 {
+  top: 6450px;
+}
+#cloud-recuerda-2 {
+  top: 6700px;
+}
+#cloud-imprime-1 {
+  top: 7250px;
+}
+#cloud-imprime-2 {
+  top: 7300px;
+}
+
+.after-anchor {
+  display: block;
+  height: 50px;
+  width: 50px;
+}

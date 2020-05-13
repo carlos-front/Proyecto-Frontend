@@ -1,0 +1,53 @@
+/* ======================================================================
+  Settings
+======================================================================== */
+
+/**
+ * @type Bool | Color schemes
+ */
+
+$bg-body-color:                               #FFF;
+$bg-content:                                  #F5F4FA;
+$bg-content-gray:                             #DEDCE7;
+
+
+$color-primary-brand:                         #6D6D6D;
+$color-secundary-brand:                       #FFF;
+$color-third-brand:                           #0082CA;
+
+
+
+// Images
+// -------------------------
+$bg-body:                                     "../img/bg.jpg";
+$bg-body-cat:                                 "../img/bg-cat.jpg";
+$bn-gracias:                                  "../img/bn-gracias.jpg";
+$bn-gracias-cat:                              "../img/bn-gracias-cat.jpg";
+
+
+// Font-size
+// -------------------------
+$font-size-title:                             54px;
+$font-size-title-block:                       48px;
+$font-size-text-block:                        18px;
+
+
+// Others
+// -------------------------
+$content-width:                               1024px;
+
+
+
+// Grid breackpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1023px,
+  lg: 1200px
+);
+
+// Z index site blocks
+$zindex: (
+  block-home: 10,
+  lang: 10
+);

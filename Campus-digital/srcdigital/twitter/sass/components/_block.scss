@@ -1,0 +1,394 @@
+/* ======================================================================
+	  Block
+	======================================================================== */
+
+$font-size-block-primeros-title:                  22px;
+$font-size-block-primeros-subtitle:               46px;
+$font-size-block-primeros-text:                   16px;
+$font-size-block-primeros-numbers:                32px;
+$font-size-block-anatomia-points:                 12px;
+$font-size-block-anatomia-points-text:            16px;
+$font-size-block-navega-title:                    55px;
+$font-size-block-navega-sub-title:                25px;
+$font-size-block-sacale-title:                    48px;
+$font-size-block-sacale-sub-title:                32px;
+$font-size-block-sacale-sub-sub-title:            30px;
+$font-size-block-sacale-directo:                  22px;
+
+
+$sabias-bullet:                                   "../img/bullet.png";
+
+
+
+.block {
+  color: $color-secundary-brand;
+  position: absolute;
+  z-index: map-get($zindex, block-home);
+  &__primeros {
+    width: 396px;
+    h2 {
+      @include rem(font-size, $font-size-block-primeros-title);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 92px 70px;
+    }
+    h3 {
+      @include rem(font-size, $font-size-block-primeros-subtitle);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 44px 20px;
+    }
+    li {
+      @include rem(font-size, $font-size-block-primeros-text);
+      line-height: 26px;
+      margin-bottom: 30px;
+      float: left;
+      width: 100%;
+      p {
+        float: left;
+        margin: 0;
+        width: 90%;
+      }
+      span {
+        @include rem(font-size, $font-size-block-primeros-numbers);
+        line-height: 32px;
+        float: left;
+        width: 10%;
+      }
+    }
+    a {
+      color: $color-secundary-brand;
+      text-decoration: underline;
+    }
+  }
+  &__anatomia {
+    position: relative;
+    width: 440px;
+    h2 {
+      @include rem(font-size, $font-size-block-primeros-title);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 0 60px;
+    }
+    h3 {
+      @include rem(font-size, $font-size-block-anatomia-points);
+      font-weight: 300;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    &--points {
+      position: absolute;
+      &--a {
+        left: 0;
+        top: 75px;
+      }
+      &--b {
+        left: 272px;
+        top: 75px;
+      }
+      &--c {
+        right: 100px;
+        top: 617px;
+      }
+    }
+    p {
+      @include rem(font-size, $font-size-block-anatomia-points-text);
+      margin: 0;
+      width: 310px;
+    }
+  }
+  &__tuit {
+    width: 750px;
+    h2 {
+      @include rem(font-size, $font-size-block-primeros-title);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 0 60px;
+    }
+    h3 {
+      @include rem(font-size, $font-size-block-anatomia-points);
+      font-weight: 300;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    &--points {
+      position: absolute;
+      &--a {
+        left: 178px;
+        top: 145px;
+      }
+      &--b {
+        left: 281px;
+        top: 145px;
+      }
+      &--c {
+        left: 495px;
+        top: 145px;
+      }
+      &--d {
+        left: 113px;
+        top: 272px;
+      }
+      &--e {
+        left: 578px;
+        top: 230px;
+      }
+      &--f {
+        left: 580px;
+        top: 308px;
+      }
+      &--g {
+        left: 28px;
+        top: 405px;
+      }
+      &--h {
+        left: 586px;
+        top: 401px;
+      }
+      &--i {
+        left: 32px;
+        top: 486px;
+      }
+      &--j {
+        left: 586px;
+        top: 454px;
+      }
+      &--k {
+        left: 168px;
+        top: 545px;
+      }
+      &--l {
+        left: 267px;
+        top: 590px;
+      }
+      &--m {
+        left: 342px;
+        top: 545px;
+      }
+    }
+    p {
+      @include rem(font-size, $font-size-block-anatomia-points-text);
+      margin: 0;
+      width: 360px;
+    }
+  }
+  &__navega {
+    position: relative;
+    margin-left: -462px;
+    left: 50%;
+    width: 924px;
+    h2 {
+      @include rem(font-size, $font-size-block-navega-title);
+      line-height: 1;
+      text-align: center;
+      margin: 0 0 40px;
+    }
+    h3 {
+      @include rem(font-size, $font-size-block-navega-sub-title);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 8px;
+    }
+    &--points {
+      position: absolute;
+      &--a {
+        left: 69px;
+        top: 6px;
+      }
+      &--b {
+        left: 229px;
+        top: 139px;
+      }
+      &--c {
+        left: 386px;
+        top: 295px;
+      }
+      &--d {
+        left: 551px;
+        top: 516px;
+        p {
+          width: 370px !important;
+        }
+      }
+      &--e {
+        left: 67px;
+        top: 1217px;
+        h3,
+        p {
+          width: 370px !important;
+        }
+      }
+      &--f {
+        left: 551px;
+        top: 1347px;
+        h3,
+        p {
+          width: 370px !important;
+        }
+      }
+    }
+    p {
+      @include rem(font-size, $font-size-block-anatomia-points-text);
+      margin: 0;
+      width: 480px;
+    }
+  }
+  &__quote {
+    @include rem(font-size, $font-size-block-anatomia-points-text);
+    text-align: center;
+    left: 0;
+    width: 100%;
+    p {
+      color: $color-primary-brand;
+      margin: 0 0 6px;
+    }
+    a {
+      color: $color-third-brand;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__sacale {
+    position: relative;
+    h2 {
+      @include rem(font-size, $font-size-block-sacale-title);
+      line-height: 1;
+      text-align: center;
+      margin: 0 0 10px;
+    }
+    h3 {
+      @include rem(font-size, $font-size-block-sacale-sub-title);
+      font-weight: 400;
+      line-height: 1;
+      text-align: center;
+      margin: 0;
+    }
+    h4 {
+      @include rem(font-size, $font-size-block-sacale-sub-sub-title);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 10px;
+    }
+    p {
+      @include rem(font-size, $font-size-block-anatomia-points-text);
+      margin: 0;
+      line-height: 24px;
+    }
+    a {
+      color: $color-secundary-brand;
+      text-decoration: underline;
+    }
+    &--points {
+      position: absolute;
+      width: 430px;
+      &--a {
+        left: 40px;
+        top: 175px;
+      }
+      &--b {
+        left: 560px;
+        top: 175px;
+      }
+      &--c {
+        left: 506px;
+        top: 519px;
+      }
+      &--d {
+        left: 40px;
+        top: 776px;
+      }
+      &--e {
+        left: 669px;
+        top: 906px;
+        width: auto;
+        h4 {
+          @include rem(font-size, $font-size-block-sacale-directo);
+          font-weight: 400;
+          line-height: 1;
+          margin: 0;
+        }
+      }
+      &--f {
+        left: 506px;
+        top: 1085px;
+      }
+      &--g {
+        left: 40px;
+        top: 1377px;
+      }
+    }
+  }
+  &__sabias {
+    text-align: center;
+    margin-left: -490px;
+    left: 50%;
+    width: 980px;
+    h2 {
+      @include rem(font-size, $font-size-block-sacale-title);
+      line-height: 1;
+      margin: 0 0 40px;
+    }
+    p {
+      @include rem(font-size, $font-size-block-anatomia-points-text);
+      margin: 0;
+      line-height: 24px;
+      text-align: left;
+    }
+    a {
+      color: $color-secundary-brand;
+      text-decoration: underline;
+    }
+    &--col {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 30px;
+      width: 420px;
+    }
+    li {
+      background-image: url($sabias-bullet);
+      background-position: 0 7px;
+      background-repeat: no-repeat;
+      padding-left: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+
+
+
+
+#primeros {
+  left: 60px;
+  top: 460px;
+}
+#anatomia {
+  left: 538px;
+  top: 555px;
+}
+#tuit {
+  left: 100px;
+  top: 1261px;
+}
+#navega {
+  top: 2122px;
+}
+#first-quote {
+  top: 3900px;
+}
+#sacale {
+  top: 4235px;
+}
+#second-quote {
+  top: 6005px;
+}
+#sabias {
+  top: 6330px;
+}
+#third-quote {
+  top: 6967px;
+}

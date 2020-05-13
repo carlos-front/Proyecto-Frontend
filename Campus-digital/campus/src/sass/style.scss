@@ -1,0 +1,45 @@
+//
+// Style 
+// Global output file
+//
+//
+
+// Modules :
+// files like functions, variables, mixins etc
+
+@import "utils/_functions";
+@import "utils/_mixins";
+@import "utils/_utility";
+@import "utils/_grid_bootstrap.scss";
+@import "utils/_settings.scss";
+
+// Components :
+// Contain files like list,
+// typography, sliders, modals
+@import "components/_fonts";
+@import "components/_ficha";
+@import "components/_modals";
+@import "components/_bn-big";
+@import "components/_campus";
+@import "components/_generic";
+@import "components/_blocks";
+@import "components/_normative";
+@import "components/_text-download";
+@import "components/_download-module";
+@import "components/_tabs";
+@import "components/_buttons";
+@import "components/_accordion";
+
+
+
+// Partials :
+// Contain files like header, footer, sidebars,
+// widgets, breadcrumbs.. patterns that contain components
+
+@import "partials/_base";
+@import "partials/_header";
+@import "partials/_footer";
+
+
+// Pages : 
+// Pages with particular styles.

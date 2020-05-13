@@ -1,0 +1,45 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+
+$font-size-intro-text-title:                 50px;
+$font-size-intro-text-subtitle:              24px;
+$font-size-intro-text-text:                  14px;
+$font-size-intro-text-writer:                32px;
+
+
+.intro-text {
+  text-align: center;
+  position: absolute;
+  margin-left: -465px;
+  left: 50%;
+  top: 198px;
+  width: 930px;
+  h1 {
+    font-family: $font-family-play;
+    @include rem(font-size, $font-size-intro-text-title);
+    font-weight: 900;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-family: $font-family-play;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+  }
+  h3 {
+    color: $color-fourth-brand;
+    font-family: $font-family-dancing;
+    @include rem(font-size, $font-size-intro-text-writer);
+    font-weight: 700;
+    margin: 0;
+  }
+  p {
+    @include rem(font-size, $font-size-intro-text-text);
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+}

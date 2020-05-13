@@ -1,0 +1,65 @@
+/* ======================================================================
+	Forms
+======================================================================== */
+
+
+$font-size-input-form-title:       30px;
+$font-size-input-form:             18px;
+$font-size-label-error:            14px;
+
+$color-input:                      #686868;
+$color-input-border:               $color-input;
+$color-label-error:                #CC0000;
+
+
+.form {
+  color: $color-input;
+  text-align: center;
+  position: absolute;
+  margin-left: -300px;
+  left: 50%;
+  top: 5695px;
+  width: 600px;
+  &__content {
+    margin: 0 auto;
+    width: 610px;
+    @extend %clearfix;
+  }
+  h2 {
+    font-family: Arial;
+    font-weight: 700;
+	font-size: 18px;
+	line-height: 23px;
+	color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 35px;
+  }
+  &__input-box,
+  input[type="text"] {
+    text-align: left;
+  }
+  &__input-box {
+    float: left;
+    margin: 0 10px 20px;
+    width: 285px;
+  }
+  input[type="text"] {
+    background-color: $color-secundary-brand;
+    color: $color-input;
+    @include rem(font-size, $font-size-input-form);
+    border: 1px solid $color-input-border;
+    padding: 15px;
+    width: 100%;
+  }
+  .btn {
+    cursor: pointer;
+    width: 180px;
+	background-color: #006DFF;
+  }
+  label {
+    &.error {
+      color: $color-label-error;
+      @include rem(font-size, $font-size-label-error);
+    }
+  }
+}

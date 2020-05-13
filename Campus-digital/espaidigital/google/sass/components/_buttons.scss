@@ -1,0 +1,53 @@
+/* ======================================================================
+	  Buttons
+	======================================================================== */
+
+
+$font-size-btn:                 12px;
+$font-size-btn-back:            14px;
+
+$icon-arrow-back:               "../img/icon-arrow-back.png";
+
+
+.btn {
+  @include rem(font-size, $font-size-btn);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 30px;
+  display: inline-block;
+  &--video {
+    color: $color-secundary-brand !important;
+    background-color: $color-third-brand;
+  }
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.btn-back {
+  color: $color-third-brand;
+  @include rem(font-size, $font-size-btn-back);
+  text-decoration: none;
+  background-image: url($icon-arrow-back);
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  margin: 15px 0 85px;
+  float: left;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-close-modal {
+  color: $color-primary-brand;
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 70px;
+  &:hover {
+    text-decoration: underline;
+  }
+}

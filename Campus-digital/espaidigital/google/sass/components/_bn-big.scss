@@ -1,0 +1,73 @@
+/* ======================================================================
+	Bn-big
+======================================================================== */
+
+
+$font-size-bn-big-title:            38px;
+$font-size-bn-big-sub-title:        20px;
+$font-size-bn-big-text:             12px;
+$font-size-bn-big-link:             14px;
+
+$icon-arrow-accede:                 "../img/icon-arrow-accede.png";
+
+
+.bn-big {
+  .content {
+    border-top: 1px solid $border-color-link-nav;
+    border-bottom: 1px solid $border-color-link-nav;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  img {
+    float: left;
+  }
+  .first-bubble,
+  .second-bubble,
+  .third-bubble {
+    color: $color-secundary-brand;
+    text-align: center;
+    position: absolute;
+    z-index: map-get($zindex, bubble);
+  }
+  .first-bubble {
+    left: 146px;
+    top: 125px;
+    width: 200px;
+  }
+  .second-bubble {
+    left: 352px;
+    top: 159px;
+    width: 150px;
+  }
+  .third-bubble {
+    left: 843px;
+    top: 170px;
+    width: 150px;
+  }
+  h1 {
+    @include rem(font-size, $font-size-bn-big-title);
+    line-height: 1.2;
+    margin: 0;
+  }
+  h2 {
+    @include rem(font-size, $font-size-bn-big-sub-title);
+    line-height: 1.1;
+    margin: 0 0 5px;
+  }
+  p {
+    @include rem(font-size, $font-size-bn-big-text);
+    margin: 0 0 8px;
+  }
+  a {
+    color: $color-secundary-brand;
+    @include rem(font-size, $font-size-bn-big-link);
+    font-weight: 700;
+    text-decoration: none;
+    background-image: url($icon-arrow-accede);
+    background-position: 100% 4px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-right: 10px;
+  }
+}

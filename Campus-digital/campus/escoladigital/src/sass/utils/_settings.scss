@@ -1,0 +1,48 @@
+/* ======================================================================
+  Settings
+======================================================================== */
+
+/**
+ * @type Bool | Color schemes
+ */
+
+$bg-body:                                     #FFF;
+
+
+$color-primary-brand:                         #000;
+$color-secundary-brand:                       #FFF;
+$color-third-brand:                           #0082CA;
+$color-fourth-brand:                          #E35205;
+
+$border-color-brand:                          #CDCDCD;
+
+
+// Images
+// -------------------------
+$sprite:                                      "../img/sprite.png";
+
+
+// Fonts
+// -------------------------
+$font-size-type-blocks:              12px;
+
+
+// Others
+// -------------------------
+$content-width:                               960px;
+
+
+
+// Grid breackpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1023px,
+  lg: 1200px
+);
+
+// Z index site blocks
+$zindex: (
+  lang: 999,
+  modal: 9999
+);

@@ -1,0 +1,47 @@
+/* ======================================================================
+  Settings
+======================================================================== */
+
+/**
+ * @type Bool | Color schemes
+ */
+
+$bg-body-color:                               #FFF;
+
+
+$color-primary-brand:                         #000;
+$color-secundary-brand:                       #0082CA;
+$color-third-brand:                           #FFF;
+$color-fourth-brand:                          #B48A6D;
+
+
+
+// Images
+// -------------------------
+$bg-body:                                     "../img/bg-blog.jpg";
+$bn-gracias:                                  "../img/bg-detail.jpg";
+
+
+// Font-size
+// -------------------------
+
+
+// Others
+// -------------------------
+$content-width:                               1024px;
+
+
+
+// Grid breackpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1023px,
+  lg: 1200px
+);
+
+// Z index site blocks
+$zindex: (
+  block-home: 10,
+  lang: 10
+);

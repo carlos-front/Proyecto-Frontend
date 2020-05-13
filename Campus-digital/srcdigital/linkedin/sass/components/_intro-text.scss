@@ -1,0 +1,44 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+$font-size-intro-text:              18px;
+$font-size-intro-text-gracias:      50px;
+
+
+
+.intro-text {
+  position: absolute;
+  left: 79px;
+  top: 144px;
+  &--cat {
+    left: 73px;
+  }
+  img {
+    margin-bottom: 45px;
+  }
+  &__col {
+    float: left;
+    width: 412px;
+    &--left {
+      margin: 0 60px 0 8px;
+    }
+  }
+  p {
+    @include rem(font-size, $font-size-intro-text);
+    margin: 0;
+  }
+  a {
+    color: $color-third-brand;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+.intro-gracias-text {
+  h1 {
+    @include rem(font-size, $font-size-intro-text-gracias);
+    line-height: 49px;
+    margin: 18px 0 0;
+  }
+}

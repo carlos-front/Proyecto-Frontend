@@ -1,0 +1,70 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+
+$font-size-intro-text-title:                 45px;
+$font-size-intro-text:                       15px;
+$font-size-intro-text-unes-title:            35px;
+$font-size-intro-text-unes-sub-title:        25px;
+
+
+
+.intro-text {
+  color: $color-secundary-brand;
+  text-align: center;
+  position: absolute;
+  margin-left: -450px;
+  left: 50%;
+  top: 115px;
+  width: 900px;
+  &__content {
+    @extend %clearfix;
+    margin-bottom: 75px;
+  }
+  h1 {
+    font-family: $font-family-titles;
+    @include rem(font-size, $font-size-intro-text-title);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 40px 0 80px;
+  }
+  p {
+    @include rem(font-size, $font-size-intro-text);
+    line-height: 28px;
+    text-align: left;
+    margin: 0;
+  }
+  &__col-left {
+    float: left;
+    width: 380px;
+  }
+  &__col-right {
+    float: right;
+    width: 380px;
+  }
+  &__unes {
+    text-align: left;
+    float: left;
+    width: 100%;
+    h2 {
+      font-family: $font-family-titles;
+      @include rem(font-size, $font-size-intro-text-unes-title);
+      font-weight: 300;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 0 0 0 130px;
+    }
+    span {
+      font-family: $font-family-titles;
+      @include rem(font-size, $font-size-intro-text-unes-sub-title);
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0 0 0 130px;
+    }
+  }
+}
+
+#empecemos {
+
+}

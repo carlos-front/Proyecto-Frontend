@@ -1,0 +1,37 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+
+$font-size-intro-text-title:                 60px;
+$font-size-intro-text:                       17px;
+
+
+
+.intro-text {
+  color: $color-secundary-brand;
+  text-align: center;
+  position: absolute;
+  margin-left: -450px;
+  left: 50%;
+  top: 115px;
+  width: 900px;
+  h1 {
+    @include rem(font-size, $font-size-intro-text-title);
+    margin: 0 0 50px;
+  }
+  p {
+    @include rem(font-size, $font-size-intro-text);
+    line-height: 28px;
+    text-align: left;
+    margin: 0;
+  }
+  &__col-left {
+    float: left;
+    width: 400px;
+  }
+  &__col-right {
+    float: right;
+    width: 400px;
+  }
+}

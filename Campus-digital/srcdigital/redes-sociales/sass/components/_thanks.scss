@@ -1,0 +1,44 @@
+/* ======================================================================
+	Thanks
+======================================================================== */
+
+$font-size-title-thanks:             42px;
+$font-size-subtitle-thanks:          24px;
+$font-size-text-thanks:              16px;
+
+$icon-tick:                          "../../../srcdigital/comprar/img/icon-tick.png";
+
+$border-color-line-thanks:           #BAB9B9;
+
+
+.title-thanks {
+  @include rem(font-size, $font-size-title-thanks);
+  margin: 20px 0 0 15px;
+}
+
+.thanks {
+  margin: 100px 0 60px;
+  &__content {
+    padding-left: 20px;
+  }
+  h2 {
+    @include rem(font-size, $font-size-subtitle-thanks);
+    background-image: url($icon-tick);
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    margin: 0 0 20px;
+    padding-left: 28px;
+  }
+  p {
+    @include rem(font-size, $font-size-text-thanks);
+    margin: 0 0 15px;
+  }
+}
+
+.other-links {
+  border-top: 1px solid $border-color-line-thanks;
+  margin-left: 20px;
+  .btn-back {
+    margin: 0;
+  }
+}

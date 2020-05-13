@@ -1,0 +1,207 @@
+/* ======================================================================
+	Forms
+======================================================================== */
+
+$font-size-title-col-text:         42px;
+$font-size-sub-title-col-text:     20px;
+$font-size-text-col-text:          21px;
+$font-size-title-col-form:         17px;
+$font-size-input-form:             14px;
+$font-size-text-util:              12px;
+$font-size-input-submit:           18px;
+$font-size-label-error:            12px;
+$font-size-note:                   11px;
+$font-size-note-aplications:       12px;
+
+$color-label-error:                #CC0000;
+$color-note:                       #666;
+
+$form-shadow:                      "../img/form-shadow.png";
+$checkbox:                         "../img/checkbox.png";
+$icon-subtitle:                    "../img/icon-subtitle.png";
+
+
+.form-home {
+  position: absolute;
+  top: 7795px;
+  form {
+    @include rem(font-size, $font-size-input-form);
+    background-image: url($form-shadow);
+    background-position: 15px 15px;
+    background-repeat: no-repeat;
+    width: 400px;
+    padding: 0 15px 15px 0;
+    &:before {
+      content: '';
+      background-image: url($arrow-box-home-left);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      height: 30px;
+      width: 15px;
+      display: block;
+      position: absolute;
+      left: -15px;
+      top: 150px;
+    }
+  }
+  &__content {
+    background-color: $color-secundary-brand;
+    padding: 20px 30px;
+  }
+  &__col-check {
+    float: left;
+    width: 50%;
+    label {
+      display: block;
+    }
+  }
+  &__col-text {
+    text-align: right;
+    margin-right: 40px;
+    padding-left: 60px;
+    float: left;
+    width: 480px;
+    h2 {
+      @include rem(font-size, $font-size-title-col-text);
+      margin: 0 0 5px;
+    }
+    h3 {
+      @include rem(font-size, $font-size-sub-title-col-text);
+      background-image: url($logo-intro-home-title);
+      background-position: 100% 9px;
+      background-repeat: no-repeat;
+      margin: 0 0 25px;
+      padding: 15px 155px 20px 0;
+    }
+    p {
+      @include rem(font-size, $font-size-text-col-text);
+      line-height: 1.2;
+      margin: 0;
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__col-form {
+    float: left;
+    position: relative;
+    margin-bottom: 165px;
+    width: 400px;
+    h2 {
+      @include rem(font-size, $font-size-title-col-form);
+      margin: 0 0 20px;
+    }
+    a {
+      color: $color-primary-brand;
+      font-weight: 700;
+    }
+  }
+  &__input-box,
+  &__accept {
+    margin-bottom: 15px;
+  }
+  &__accept {
+    p {
+      margin: 0;
+    }
+  }
+  input[type="text"],
+  textarea {
+    @include rem(font-size, $font-size-input-form);
+    border: 1px solid $color-primary-brand;
+    padding: 5px 10px;
+    width: 100%;
+  }
+  input[type="text"] {
+    height: 35px;
+  }
+  textarea {
+    height: 75px;
+    margin-top: 10px;
+  }
+  p {
+    &.util {
+      @include rem(font-size, $font-size-text-util);
+      font-weight: 700;
+    }
+  }
+  label {
+    &.check {
+      margin-bottom: 10px;
+    }
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .checkbox {
+    background-image: url($checkbox);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 19px;
+    width: 19px;
+    margin-right: 5px;
+  }
+  .checkbox.active {
+    background-position: 0 -31px;
+  }
+  input[type="submit"] {
+    color: $color-secundary-brand;
+    @include rem(font-size, $font-size-input-submit);
+    font-weight: 700;
+    text-align: center;
+    background-color: $color-third-brand;
+    border: 0;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+.ui-dialog {
+  .ui-dialog-title {
+    @include rem(font-size, $font-size-input-form);
+  }
+  p {
+    @include rem(font-size, $font-size-input-form);
+    margin: 0 0 15px;
+  }
+}
+#error-general {
+  display: none;
+}
+label {
+  &.error {
+    color: $color-label-error;
+    @include rem(font-size, $font-size-label-error);
+  }
+}
+
+p {
+  &.note {
+    color: $color-note;
+    //@include rem(font-size, $font-size-note);
+    font-size: 11px !important;
+    font-style: italic;
+  }
+  &.note-aplications {
+    @include rem(font-size, $font-size-note-aplications);
+    font-style: italic;
+    margin-top: 30px;
+  }
+  &.with-icon-subtitle {
+    color: $color-note;
+    //@include rem(font-size, $font-size-note);
+    font-size: 11px !important;
+    font-style: italic;
+    margin: 0 !important;
+    /*background-image: url($icon-subtitle);
+    background-position: 100% 5px;
+    background-repeat: no-repeat;
+    padding: 10px 35px 10px 0;
+    display: inline;*/
+  }
+}

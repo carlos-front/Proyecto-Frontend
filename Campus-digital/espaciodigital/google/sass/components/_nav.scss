@@ -1,0 +1,35 @@
+/* ======================================================================
+	Nav
+======================================================================== */
+
+$font-size-nav:          12px;
+
+
+nav {
+  background-color: $color-secundary-brand;
+  height: 75px;
+  img {
+    float: left;
+  }
+  ul {
+    float: right;
+    margin-top: 20px;
+  }
+  li {
+    float: left;
+    margin-right: 40px;
+    div {
+      font-size: 10px;
+    }
+  }
+  a {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-nav);
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

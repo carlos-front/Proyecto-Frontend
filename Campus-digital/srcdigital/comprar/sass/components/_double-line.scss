@@ -1,0 +1,21 @@
+/* ======================================================================
+	Double Line
+======================================================================== */
+
+
+
+.double-line {
+  margin-bottom: 25px;
+  &__up,
+  &__down {
+    background-color: $color-third-brand;
+    width: 100%;
+  }
+  &__up {
+    height: 3px;
+    margin-bottom: 2px;
+  }
+  &__down {
+    height: 5px;
+  }
+}

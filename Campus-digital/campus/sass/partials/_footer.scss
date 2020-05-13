@@ -1,0 +1,67 @@
+/* ======================================================================
+	Footer
+======================================================================== */
+
+$font-size-text-footer:            10px;
+$font-size-footer-menu:            12px;
+$color-text-footer:                #999;
+$border-color-footer:              #CCC;
+
+
+footer {
+  .border-line {
+    border-top: 1px solid $border-color-footer;
+    padding-top: 20px;
+  }
+  color: $color-text-footer;
+  @include rem(font-size, $font-size-text-footer);
+  line-height: 5px;
+  margin: 50px auto;
+  text-align: center;
+  a {
+    color: $color-third-brand;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-menu {
+  margin-bottom: 15px;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+  }
+  a {
+    color: $color-text-footer;
+    @include rem(font-size, $font-size-footer-menu);
+    line-height: 1;
+    text-decoration: underline;
+    &:hover {
+      color: $color-primary-brand;
+    }
+  }
+}
+
+.footer-content {
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+  }
+  &__logo-left {
+    float: left;
+    width: 120px;
+  }
+  &__logo-right {
+    float: right;
+    width: 120px;
+  }
+}
+
+.last-logo {
+  float: left;
+  width: 100%;
+}

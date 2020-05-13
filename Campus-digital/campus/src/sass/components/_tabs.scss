@@ -1,0 +1,126 @@
+/* ======================================================================
+	  Tabs
+	======================================================================== */
+
+$font-size-menu-tabs:             18px;
+$font-size-title-menu-tabs:        27px;
+
+
+.tabs-menu-container {
+  background-color: $bg-body;
+  border-bottom: 1px solid $border-color-brand;
+  margin-bottom: 30px;
+  h1 {
+    margin: 0 0 20px;
+  }
+  h2 {
+    color: $color-primary-brand;
+    @include rem(font-size, $font-size-title-menu-tabs);
+  }
+  p {
+    margin: 0 0 30px;
+  }
+}
+
+.tabs-menu {
+  float: left;
+  clear: both;
+  margin-bottom: -1px;
+  li {
+    float: left;
+    background-color: $bg-body;
+    border-bottom: 0;
+    border-right: 1px solid $border-color-brand;
+    border-top: 1px solid $border-color-brand;
+    margin: 0;
+    min-height: inherit;
+    width: auto;
+    &:first-child {
+      border-left: 1px solid $border-color-brand;
+    }
+    &.current {
+      position: relative;
+      background-image: url($bg-school);
+      background-position: 0 0;
+      background-repeat: repeat;
+      border-bottom: 1px solid #F4F4F4;
+      z-index: 5;
+      a {
+        color: $color-primary-brand;
+      }
+    }
+    a {
+      color: $color-third-brand;
+      @include rem(font-size, $font-size-menu-tabs);
+      font-weight: 700;
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+.tab {
+  float: left;
+  margin-bottom: 20px;
+  width: auto;
+  &__on-pres {
+    margin-bottom: 35px;
+    @extend %clearfix;
+    p {
+      margin-bottom: 5px !important;
+    }
+    &--last {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tab-content,
+.tab-content-accordion {
+  float: left;
+  width: 100%;
+  display: none;
+  p {
+    margin-bottom: 20px;
+  }
+  .tab-content-content {
+    background-color: $color-secundary-brand;
+    border: 1px solid $border-color-brand;
+    padding: 30px 20px;
+    @extend %clearfix;
+    li {
+      margin-bottom: 0;
+      min-height: inherit;
+      width: 268px;
+      li {
+        margin-right: 0;
+      }
+    }
+    a {
+      color: $color-third-brand;
+      padding: 10px 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .no-link {
+      color: #666;
+      font-weight: 700;
+      display: block;
+      padding: 10px 5px;
+    }
+    &--with-margin-bottom {
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+  }
+}
+
+#tab-1,
+#tab-a,
+#tab-e {
+  display: block;
+}

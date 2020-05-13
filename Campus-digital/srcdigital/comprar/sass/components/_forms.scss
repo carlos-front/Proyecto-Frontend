@@ -1,0 +1,126 @@
+/* ======================================================================
+	Forms
+======================================================================== */
+
+$font-size-text-title-form:        21px;
+$font-size-input-form:             18px;
+$font-size-label-error:            14px;
+
+$color-input:                      #AFAFAF;
+$color-input-border:               #979797;
+$color-label-error:                #CC0000;
+
+$bg-form:                          #F7F7EF;
+
+
+$bg-img-form:                      "../img/bg-form.jpg";
+$checkbox:                         "../img/checkbox.png";
+
+
+.form {
+  text-align: center;
+  background-color: $bg-form;
+  background-image: url($bg-img-form);
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid $color-input-border;
+  border-left: 1px solid $color-input-border;
+  border-right: 1px solid $color-input-border;
+  position: absolute;
+  margin-left: -373px;
+  padding: 135px 0 50px;
+  left: 50%;
+  width: 757px;
+  &__content {
+    margin: 0 auto;
+    width: 650px;
+    @extend %clearfix;
+  }
+  h2 {
+    color: $color-third-brand;
+    font-family: "Abril Fatface", cursive;
+    @include rem(font-size, $font-size-title-block);
+    margin: 0 0 20px;
+  }
+  h2 + p {
+    @include rem(font-size, $font-size-text-title-form);
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  p {
+    @include rem(font-size, $font-size-input-form);
+    text-align: left;
+    margin: 0 0 15px;
+  }
+  &__input-box,
+  input[type="text"] {
+    text-align: left;
+  }
+  &__input-box {
+    float: left;
+    margin: 0 10px 20px;
+    width: 304px;
+  }
+  input[type="text"] {
+    background-color: $color-secundary-brand;
+    color: $color-input;
+    @include rem(font-size, $font-size-input-form);
+    border: 1px solid $color-input-border;
+    padding: 15px;
+    width: 100%;
+  }
+  .btn {
+    cursor: pointer;
+    width: 180px;
+  }
+  label {
+    &.error {
+      color: $color-label-error;
+      @include rem(font-size, $font-size-label-error);
+    }
+  }
+  .excep {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    label {
+      &.error {
+        float: left;
+      }
+    }
+  }
+  &__accept {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 0 10px;
+    p {
+      margin-bottom: 0;
+    }
+    label {
+      &.error {
+        float: left;
+      }
+    }
+  }
+  input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+  }
+  .checkbox {
+    background-image: url($checkbox);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 23px;
+    width: 23px;
+    margin-right: 10px;
+  }
+  .checkbox.active {
+    background-position: 0 -33px;
+  }
+  a {
+    color: $color-primary-brand;
+    text-decoration: underline;
+  }
+}

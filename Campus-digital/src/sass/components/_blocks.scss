@@ -1,0 +1,231 @@
+/* ======================================================================
+	Blocks
+======================================================================== */
+
+
+$font-size-title-blocks:             24px;
+$font-size-sub-title-blocks:         18px;
+$font-size-text-blocks:              14px;
+$font-size-link-blocks:              12px;
+
+$color-type-blocks:                  #929292;
+
+$bg-school:                          "../img/bg-school.gif";
+
+
+.blocks {
+  h2 {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-title-blocks);
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+  h3 {
+    @include rem(font-size, $font-size-sub-title-blocks);
+    margin: 0 0 5px;
+  }
+  h2 + p {
+    margin-bottom: 20px;
+  }
+  p {
+    @include rem(font-size, $font-size-text-blocks);
+    margin: 0;
+    &.with-margin-bottom {
+      margin-bottom: 20px;
+    }
+  }
+  a {
+    @include rem(font-size, $font-size-link-blocks);
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+  }
+  &__link-more {
+    color: $color-third-brand;
+    line-height: 33px;
+    float: left;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__link-im {
+    color: $color-secundary-brand;
+    text-align: center;
+    background-color: $color-third-brand;
+    padding: 8px 5px;
+    float: right;
+    width: 130px;
+  }
+  li {
+    border-bottom: 1px solid $border-color-brand;
+    position: relative;
+    float: left;
+    margin: 0 40px 40px 0;
+    min-height: 225px;
+    width: 283px;
+    &.last {
+      margin-right: 0;
+    }
+    &.no-border-bottom {
+      border-bottom: 0;
+    }
+  }
+  &--type-a {
+    li {
+      border-top: 4px solid $color-third-brand;
+      background-color: $color-secundary-brand;
+      &.excep-height {
+        min-height: 150px;
+      }
+    }
+  }
+  &--type-b {
+    h2 {
+      color: $color-fourth-brand;
+      line-height: 1.2;
+    }
+    li {
+      border-top: 4px solid $color-fourth-brand;
+      background-color: $color-secundary-brand;
+    }
+  }
+  &--type-c {
+    h2 {
+      color: $color-primary-brand;
+    }
+    li {
+      border-top: 4px solid $color-primary-brand;
+      background-color: $color-secundary-brand;
+      &.excep {
+        min-height: 120px;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+    &.excep {
+      li {
+        min-height: inherit;
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 50px;
+    padding: 10px 0 0 10px;
+    &--no-type {
+      margin-bottom: 20px;
+      padding: 10px 0 0;
+    }
+  }
+  &__links {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 273px;
+  }
+  &__type {
+    color: $color-type-blocks;
+    @include rem(font-size, $font-size-type-blocks);
+    font-weight: 700;
+    margin: 5px 0;
+    float: left;
+    width: 100%;
+    &:before {
+      content: '';
+      background-image: url($sprite);
+      background-repeat: no-repeat;
+      margin: 2px 5px 0 0;
+      float: left;
+      height: 20px;
+      width: 20px;
+    }
+    &--online {
+      &:before {
+        background-position: 0 0;
+      }
+    }
+    &--pre {
+      &:before {
+        background-position: -48px 0;
+      }
+    }
+    &--onpre {
+      &:before {
+        background-position: -90px 0;
+        width: 50px;
+      }
+    }
+  }
+  &__list-links {
+    li {
+      min-height: inherit;
+      border-top: 0;
+      margin: 0 0 10px;
+      padding-bottom: 10px;
+      &.last {
+        border-bottom: 0;
+      }
+    }
+    a {
+      color: $color-third-brand;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &--with-padding {
+      padding: 15px 10px 10px;
+      @extend %clearfix;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  &__bg-school {
+    background-image: url($bg-school);
+    background-position: 0 0;
+    background-repeat: repeat;
+    border-bottom: 1px solid $border-color-brand;
+    border-top: 1px solid $border-color-brand;
+    padding: 50px 0 30px;
+  }
+  &__set {
+    background-color: $color-secundary-brand;
+    margin-bottom: 40px;
+    padding: 20px 20px 0;
+    li {
+      width: 270px;
+    }
+  }
+  &__two-cols {
+    background-color: $color-secundary-brand;
+    float: left;
+    margin-bottom: 40px;
+    padding: 20px 20px 0;
+    width: 450px;
+    &--left {
+      margin-right: 30px;
+    }
+    li {
+      min-height: inherit;
+      margin-bottom: 0;
+      margin-right: 0;
+      width: 100%;
+      .blocks__list-links {
+       padding-top: 20px;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.matri {
+  color: $color-secundary-brand;
+  @include rem(font-size, 12px);
+  font-weight: 700;
+  background-color: $color-third-brand;
+  margin-bottom: 2px;
+  padding: 3px 11px;
+  float: left;
+  width: 100%;
+}

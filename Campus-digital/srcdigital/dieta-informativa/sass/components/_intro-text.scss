@@ -1,0 +1,28 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+
+$font-size-intro-text-title-span:                 24px;
+$font-size-intro-text-title:                      40px;
+
+
+.intro-text {
+  text-align: center;
+  position: absolute;
+  margin-left: -465px;
+  left: 50%;
+  top: 20px;
+  width: 930px;
+  h2 {
+    @include rem(font-size, $font-size-intro-text-title);
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0;
+    span {
+      @include rem(font-size, $font-size-intro-text-title-span);
+      font-weight: 700;
+    }
+  }
+}

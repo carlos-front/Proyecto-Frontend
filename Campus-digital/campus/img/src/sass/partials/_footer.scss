@@ -1,0 +1,36 @@
+/* ======================================================================
+	Footer
+======================================================================== */
+
+$font-size-text-footer:            12px;
+$font-size-footer-menu:            12px;
+$color-text-footer:                #999;
+
+
+footer {
+  color: $color-text-footer;
+  @include rem(font-size, $font-size-text-footer);
+  line-height: 1;
+  margin: 50px auto;
+  text-align: center;
+  float: left;
+  width: 100%;
+  a {
+    color: $color-third-brand;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    padding: 15px 0;
+  }
+  li {
+    display: inline;
+    margin: 0 8px;
+    a {
+      color: $color-primary-brand;
+      font-weight: 700;
+    }
+  }
+}

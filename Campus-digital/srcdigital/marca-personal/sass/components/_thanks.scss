@@ -1,0 +1,83 @@
+/* ======================================================================
+	Thanks
+======================================================================== */
+
+$font-size-title-thanks:             52px;
+$font-size-subtitle-thanks:          24px;
+$font-size-text-thanks:              16px;
+
+$icon-tick:                          "../../../srcdigital/comprar/img/icon-tick.png";
+
+$border-color-line-thanks:           #BAB9B9;
+
+.btn-back{
+	color: #000;
+}
+.title-thanks {
+  color: #173B56;
+  letter-spacing: -0.2px;
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 20px 5px;
+  line-height: 40px;
+}
+.title-thanks span{
+	font-weight: bold;
+}
+
+.thanks {
+  margin: 100px 0 60px;
+  &__content {
+    padding-left: 20px;
+  }
+  h2 {
+    @include rem(font-size, $font-size-subtitle-thanks);
+    background-image: url($icon-tick);
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    margin: 0 0 20px;
+    padding-left: 28px;
+  }
+  p {
+    @include rem(font-size, $font-size-text-thanks);
+    margin: 0 0 15px;
+  }
+}
+/* ======================================================================
+	Footer
+======================================================================== */
+
+
+$font-size-text-footer:            10px;
+$font-size-footer-menu:            12px;
+$color-text-footer:                #999;
+$border-color-footer:              #CCC;
+
+
+
+.footer-thanks {
+  .border-line {
+    border-top: 1px solid $border-color-footer;
+    padding-top: 20px;
+  }
+  color: $color-text-footer !important;
+  @include rem(font-size, $font-size-text-footer);
+  line-height: 5px;
+  text-align: center;
+  margin: 50px auto;
+  padding-bottom: 50px;
+  a {
+    color: $color-third-brand !important;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &.home {
+    position: absolute;
+    left: 0;
+    top: 7000px;
+    width: 100%;
+  }
+}

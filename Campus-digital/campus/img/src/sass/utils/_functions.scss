@@ -1,0 +1,9 @@
+// Strip units !important for rem
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Parse integers !important for rem
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}

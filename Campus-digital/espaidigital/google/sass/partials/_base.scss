@@ -1,0 +1,49 @@
+/* ======================================================================
+	Layout
+======================================================================== */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-primary-brand;
+  font-family: $font-family-base;
+  font-weight: 400;
+  @include rem(font-size, $font-size-base);
+  line-height: $line-height-base;
+  background-color: $bg-body;
+  background-image: url($bg-fichas);
+  background-position: center top;
+  background-repeat: no-repeat;
+  &.home {
+    background-color: $bg-body;
+    background-image: url($bg-body);
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+  &.no-bg {
+    background: none;
+  }
+}
+
+.content {
+  @extend %clearfix;
+  margin: 0 auto;
+  padding: 0 20px;
+  //max-width: $content-width;
+  width: $content-width;
+  position: relative;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

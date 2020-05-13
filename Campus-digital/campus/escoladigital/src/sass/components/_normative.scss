@@ -1,0 +1,27 @@
+/* ======================================================================
+	Normative
+======================================================================== */
+
+
+$font-size-text-normative:          14px;
+$font-size-text-normative:          12px;
+
+
+
+.normative {
+  padding: 10px 0;
+  p {
+    @include rem(font-size, $font-size-text-normative);
+    font-weight: 700;
+    margin: 0;
+  }
+  a {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-text-normative);
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

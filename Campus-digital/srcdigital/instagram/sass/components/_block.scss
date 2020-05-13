@@ -1,0 +1,304 @@
+/* ======================================================================
+	  Block
+	======================================================================== */
+
+$font-size-block-title:                  45px;
+$font-size-block-sub-title:              21px;
+$font-size-block-text:                   15px;
+
+
+
+
+.block {
+  color: $color-secundary-brand;
+  position: absolute;
+  z-index: map-get($zindex, block-home);
+  h2,
+  h3 {
+    font-family: $font-family-titles;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h2 {
+    @include rem(font-size, $font-size-block-title);
+  }
+  h3 {
+    @include rem(font-size, $font-size-block-sub-title);
+    margin-bottom: 8px;
+  }
+  p {
+    @include rem(font-size, $font-size-block-text);
+    margin: 0;
+  }
+  a {
+    color: $color-secundary-brand;
+    text-decoration: underline;
+  }
+  &__empecemos {
+    width: 600px;
+    h2 {
+      margin: 0 0 40px 100px;
+    }
+    &--content {
+      position: absolute;
+      left: 280px;
+      width: 100%;
+    }
+    ul {
+      position: absolute;
+      left: 90px;
+      top: 250px;
+    }
+    li {
+      margin-bottom: 40px;
+      &:first-child {
+        margin-top: 40px;
+      }
+      &.one,
+      &.two,
+      &.three {
+        width: 385px;
+      }
+      &.four,
+      &.five {
+        margin-left: 290px;
+        width: 480px;
+      }
+    }
+  }
+  &__anatomia {
+    width: 380px;
+    &--cat {
+      width: 350px;
+    }
+    h2 {
+      line-height: 60px;
+      margin-bottom: 41px;
+    }
+    ul {
+      @include rem(font-size, $font-size-block-text);
+    }
+    li {
+      &.one {
+        margin-bottom: 30px;
+      }
+      &.two {
+        margin-bottom: 30px;
+      }
+      &.three {
+        margin-bottom: 30px;
+        margin-left: 60px;
+      }
+      &.four {
+        margin-bottom: 30px;
+        margin-left: 60px;
+      }
+      &.five {
+        margin-bottom: 40px;
+        margin-left: 60px;
+      }
+      &.six {
+        margin-bottom: 50px;
+        margin-left: 60px;
+      }
+      &.seven {
+        margin-left: 60px;
+      }
+    }
+  }
+  &__publico {
+    width: 700px;
+    h2 {
+      line-height: 60px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    ul {
+      @include rem(font-size, $font-size-block-text);
+    }
+    li {
+      &.one {
+        margin-bottom: 107px;
+        margin-left: 20px;
+        width: 380px;
+      }
+      &.two {
+        margin-bottom: 52px;
+        margin-left: 280px;
+        width: 450px;
+      }
+      &.three {
+        margin-bottom: 46px;
+        margin-left: 280px;
+        width: 450px;
+      }
+      &.four {
+        margin-left: 280px;
+        width: 450px;
+      }
+    }
+  }
+  &__decalogo {
+    width: 904px;
+    h2 {
+      line-height: 60px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    ul {
+      @include rem(font-size, $font-size-block-text);
+    }
+    li {
+      width: 100%;
+      @extend %clearfix;
+      span,
+      div {
+        float: left;
+      }
+      span {
+        font-family: $font-family-titles;
+        @include rem(font-size, $font-size-block-title);
+        margin-right: 10px;
+        line-height: 1;
+      }
+      div {
+        width: 420px;
+      }
+      h3 {
+        padding-top: 10px;
+      }
+      &.one {
+        margin-bottom: 65px;
+      }
+      &.two {
+        margin-bottom: 90px;
+        &.decalogo-two-cat {
+          div {
+            width: 410px;
+          }
+        }
+      }
+      &.three {
+        margin-bottom: 60px;
+        margin-left: 430px;
+        width: 490px;
+        div {
+          width: 380px;
+        }
+      }
+      &.four {
+        margin-bottom: 60px;
+        margin-left: 430px;
+        width: 500px;
+        div {
+          width: 320px;
+        }
+      }
+      &.five {
+        margin-bottom: 114px;
+        margin-left: 58px;
+        width: 510px;
+        div {
+          width: 440px;
+        }
+      }
+      &.six {
+        margin-bottom: 100px;
+        margin-left: 430px;
+        width: 480px;
+        div {
+          width: 390px;
+        }
+      }
+      &.seven {
+        margin-bottom: 80px;
+        margin-left: 54px;
+        width: 480px;
+        div {
+          width: 410px;
+        }
+      }
+      &.eight {
+        margin-bottom: 135px;
+        margin-left: 54px;
+        width: 480px;
+        div {
+          width: 410px;
+        }
+      }
+      &.nine {
+        margin-bottom: 135px;
+        margin-left: 380px;
+        width: 520px;
+        div {
+          width: 400px;
+        }
+        &.decalogo-nine-cat {
+          margin-bottom: 95px;
+          div {
+            width: 420px;
+          }
+        }
+      }
+      &.ten {
+        margin-left: 54px;
+        div {
+          width: 530px;
+        }
+      }
+    }
+    p {
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  &__saber {
+    color: #333;
+    text-align: center;
+    margin-left: -380px;
+    left: 50%;
+    width: 760px;
+    h2 {
+      line-height: 60px;
+      margin-bottom: 30px;
+    }
+    p {
+      @include rem(font-size, 16px);
+      font-weight: 700;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 10px;
+    }
+    a {
+      color: #333;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+#empecemos {
+  top: 787px;
+}
+
+#anatomia {
+  left: 525px;
+  top: 1847px;
+}
+#publico {
+  left: 160px;
+  top: 2642px;
+}
+#decalogo {
+  left: 60px;
+  top: 3614px;
+}
+#saber {
+  top: 6233px;
+}

@@ -1,0 +1,25 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+
+$font-size-intro-text-title:                 60px;
+
+
+.intro-text {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $color-secundary-brand;
+  text-align: center;
+  position: absolute;
+  margin-left: -465px;
+  left: 50%;
+  top: 60px;
+  width: 930px;
+  h2 {
+    font-family: $font-family-secundary;
+    @include rem(font-size, $font-size-intro-text-title);
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+  }
+}

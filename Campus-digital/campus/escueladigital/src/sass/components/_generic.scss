@@ -1,0 +1,64 @@
+/* ======================================================================
+	Generic
+======================================================================== */
+
+
+$bg-generic:           #FAFAFA;
+
+$font-size-title-generic:            18px;
+$font-size-link-generic:             12px;
+$font-size-link-ul-generic:          14px;
+
+
+
+.generic {
+  background-color: $bg-generic;
+  border-bottom: 1px solid $border-color-brand;
+  border-top: 1px solid $border-color-brand;
+  margin-bottom: 35px;
+  padding: 15px 0;
+  h3 {
+    @include rem(font-size, $font-size-title-generic);
+    margin: 0 0 8px;
+  }
+  p {
+    margin: 0 0 5px;
+  }
+  a {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-link-generic);
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 0 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    float: left;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  li {
+    float: left;
+    a {
+      color: $color-third-brand;
+      @include rem(font-size, $font-size-link-ul-generic);
+      font-weight: 700;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &:after {
+      content: '|';
+      margin: 0 20px;
+    }
+    &.last {
+      &:after {
+        content: '';
+        margin: 0;
+      }
+    }
+  }
+}

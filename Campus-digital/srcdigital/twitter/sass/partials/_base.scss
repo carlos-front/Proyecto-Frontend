@@ -1,0 +1,48 @@
+/* ======================================================================
+	Layout
+======================================================================== */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-primary-brand;
+  font-family: $font-family-base;
+  font-weight: 400;
+  @include rem(font-size, $font-size-base);
+  line-height: $line-height-base;
+  background-color: $bg-body-color;
+  background-image: url($bg-body);
+  background-position: 50% 105px;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  &.gracias {
+    background-image: url($bn-gracias);
+    background-position: 50% 105px;
+    color: #000;
+  }
+  &.bg-fichas {
+    background-image: url($bg-fichas);
+  }
+}
+
+.content {
+  @extend %clearfix;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: $content-width;
+  position: relative;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

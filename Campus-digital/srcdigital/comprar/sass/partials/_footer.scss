@@ -1,0 +1,44 @@
+/* ======================================================================
+	Footer
+======================================================================== */
+
+
+$font-size-text-footer:            10px;
+$font-size-footer-menu:            12px;
+$color-text-footer:                #999;
+$border-color-footer:              #CCC;
+
+
+
+.footer {
+  .border-line {
+    border-top: 1px solid $border-color-footer;
+    padding-top: 20px;
+  }
+  color: $color-text-footer;
+  @include rem(font-size, $font-size-text-footer);
+  line-height: 5px;
+  margin: 50px auto;
+  text-align: center;
+  a {
+    color: $color-third-brand;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &.home {
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 8850px;
+    width: 100%;
+  }
+  p {
+    &.cont {
+      @include rem(font-size, $font-size-base);
+      line-height: 20px;
+      margin-bottom: 140px;
+    }
+  }
+}

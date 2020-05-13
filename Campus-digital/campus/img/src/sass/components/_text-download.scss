@@ -1,0 +1,33 @@
+/* ======================================================================
+	Text Download
+======================================================================== */
+
+
+$font-size-text-col-left:          14px;
+
+
+
+
+.text-download {
+  padding: 30px 0 40px;
+  &__col-left {
+    @include rem(font-size, $font-size-text-col-left);
+    float: left;
+    width: 640px;
+    p {
+      margin: 0 0 20px;
+    }
+    a {
+      color: $color-third-brand;
+      font-weight: 700;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__col-right {
+    float: right;
+    width: 250px;
+  }
+}

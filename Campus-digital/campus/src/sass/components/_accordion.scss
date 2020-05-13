@@ -1,0 +1,377 @@
+/* ======================================================================
+	  Accordion
+	======================================================================== */
+
+$font-size-accordion-title:                 27px;
+$font-size-accordion-text:                  16px;
+$font-size-accordion-link:                  12px;
+$font-size-accordion-title-formadores:      18px;
+$font-size-accordion-text-formadores:       14px;
+$font-size-accordion-valoracion-title:      20px;
+$font-size-accordion-valoracion-sub-title:  14px;
+$font-size-accordion-valoracion-span:       11px;
+$font-size-accordion-owl-dots-number:       14px;
+
+
+.accordion {
+  &--with-margin-bottom {
+    margin-bottom: 40px;
+  }
+  .content {
+    background-color: $color-secundary-brand;
+    padding: 30px 20px;
+  }
+  h2 {
+    color: $color-primary-brand;
+    @include rem(font-size, $font-size-accordion-title);
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+  p {
+    @include rem(font-size, $font-size-accordion-text);
+    font-weight: 400;
+    margin: 0 0 20px;
+  }
+  a {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-accordion-link);
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $border-color-brand;
+    a {
+      margin: 0;
+      padding: 10px 0;
+      display: block;
+      position: relative;
+      &:hover  {
+        text-decoration: none;
+      }
+      &:before {
+        content: '';
+        background-image: url($sprite);
+        background-position: -88px -88px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        right: 10px;
+        height: 12px;
+        width: 12px;
+      }
+      &.opened {
+        color: $color-primary-brand;
+        &:before {
+          background-position: -88px -134px;
+        }
+      }
+    }
+    &.last {
+      border-bottom: 0;
+    }
+    li {
+      a {
+        display: inline-block;
+        margin-bottom: 6px;
+        padding: 0;
+        &:before {
+          background: none;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    a {
+      padding: 20px 0;
+      @extend %clearfix;
+    }
+    &--text {
+      float: left;
+      p {
+        color: $color-primary-brand;
+        @include rem(font-size, $font-size-accordion-text-formadores);
+        margin: 0 !important;
+      }
+    }
+    &--listado-formadores {
+      img {
+        float: left;
+        margin: 0 30px 0 20px;
+      }
+      h2 {
+        @include rem(font-size, $font-size-accordion-title-formadores);
+        font-weight: 700;
+        margin: 0 0 10px;
+      }
+      p {
+        @include rem(font-size, $font-size-accordion-text-formadores);
+        margin: 0 0 10px;
+      }
+      .accordion__drop {
+        padding-left: 125px;
+      }
+    }
+  }
+  &__drop {
+    display: none;
+    padding: 10px 40px 20px;
+    @extend %clearfix;
+    &--excep-drop {
+      padding-left: 0;
+      padding-right: 0;
+      .accordion__drop--col-left {
+        padding-left: 40px;
+      }
+      .accordion__drop--col-right {
+        padding-right: 40px;
+      }
+    }
+    li {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    h4 {
+      @include rem(font-size, $font-size-accordion-link);
+      margin: 40px 0 30px;
+      float: left;
+      width: 100%;
+    }
+    &--col-left {
+      border-right: 1px solid $border-color-brand;
+      ul {
+        margin-right: 35px;
+      }
+    }
+    &--col-right {
+      ul {
+        margin-left: 35px;
+      }
+    }
+  }
+  &__simple-list {
+    li {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 6px;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    &--col-left {
+      ul {
+        padding-right: 20px;
+      }
+    }
+    &--col-right {
+      ul {
+        margin-left: 20px;
+      }
+    }
+  }
+  &--valoracion {
+    .content {
+      padding: 0;
+    }
+    h3 {
+      @include rem(font-size, $font-size-accordion-valoracion-title);
+      margin: 0;
+      cursor: pointer;
+      position: relative;
+      line-height: 27px;
+      &:before {
+        content: '';
+        background-image: url($sprite);
+        background-position: -47px -157px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        height: 27px;
+        width: 17px;
+      }
+      &.opened {
+        &:before {
+          background-position: 0 -157px;
+        }
+      }
+    }
+    h4 {
+      @include rem(font-size, $font-size-accordion-valoracion-sub-title);
+    }
+    .accordion__drop {
+      padding: 30px 0 0;
+      h4 {
+        margin: 0 0 20px;
+      }
+      li {
+        margin: 0 0 10px !important;
+        padding: 0 0 10px !important;
+        width: 100% !important;
+      }
+      a {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .tabs-menu-accordion {
+      text-align: center;
+      margin-bottom: 25px;
+      @extend %clearfix;
+      li {
+        border-bottom: 1px solid $border-color-brand;
+        border-left: 1px solid $border-color-brand;
+        border-top: 1px solid $border-color-brand;
+        margin: 0 !important;
+        padding: 0 !important;
+        float: left;
+        width: 25% !important;
+        &.last,
+        &:last-child {
+          border-left: 0;
+          border-right: 1px solid $border-color-brand;
+        }
+        &.current {
+          a {
+            color: $color-secundary-brand;
+            background-color: $color-third-brand;
+          }
+        }
+        a {
+          color: $color-primary-brand;
+          background-color: #F4F4F4;
+          display: block;
+          padding: 10px 0;
+          @include css3(transition-duration, .3s);
+          &:hover {
+            color: $color-secundary-brand;
+            text-decoration: none;
+            background-color: $color-third-brand;
+          }
+        }
+      }
+    }
+  }
+  span {
+    @include rem(font-size, $font-size-accordion-valoracion-span);
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    margin-right: 25px;
+    padding: 5px 10px;
+    width: 180px;
+    &.type-e-c {
+      color: #E35205;
+      background-color: rgba(227, 82, 5, .2);
+    }
+    &.type-e-m {
+      color: $color-third-brand;
+      background-color: rgba(0, 130, 202, .2);
+    }
+    &.type-e-d {
+      color: #666;
+      background-color: rgba(102, 102, 102, .2);
+    }
+    &.type-e-f {
+      color: #239D45;
+      background-color: rgba(35, 157, 69, .2);
+    }
+  }
+  .owl-carousel .owl-stage-outer {
+    width: 100%;
+  }
+  .owl-dots {
+    text-align: center;
+    counter-reset: slides-num;
+    position: absolute;
+    top: 101%;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    &:after {
+      color: #999;
+      @include rem(font-size, $font-size-accordion-owl-dots-number);
+      font-weight: 400;
+      content: counter(slides-num);
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+    }
+  }
+  .owl-dot {
+    counter-increment: slides-num;
+    position: absolute;
+    z-index: -1;
+    &.active {
+      &:before {
+        color: $color-third-brand;
+        @include rem(font-size, $font-size-accordion-owl-dots-number);
+        font-weight: 700;
+        content:  counter(slides-num);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+      }
+    }
+  }
+  .owl-nav {
+    margin-left: -80px;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    width: 160px;
+  }
+  .owl-nav [class*=owl-] {
+    &:hover {
+      background: none;
+    }
+  }
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      background-color: transparent;
+      background-image: url($sprite);
+      background-repeat: no-repeat;
+      border-radius: 0;
+      height: 19px;
+      width: 12px;
+      &:hover {
+        background-image: url($sprite);
+        background-repeat: no-repeat;
+      }
+    }
+    .owl-prev {
+      background-position: -88px -161px;
+      float: left;
+      &:hover {
+        background-position: -88px -161px;
+      }
+    }
+    .owl-next {
+      background-position: -126px -161px;
+      float: right;
+      &:hover {
+        background-position: -126px -161px;
+      }
+    }
+  }
+  .info-pager {
+    color: #999;
+    @include rem(font-size, $font-size-accordion-owl-dots-number);
+    line-height: 30px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,62 @@
+/* ======================================================================
+	Modal Conditions
+======================================================================== */
+
+$font-size-title-legals:                                            22px;
+$font-size-subtitle-legals:                                         18px;
+$font-size-text-legals:                                             14px;
+$font-size-close-modal:                                             30px;
+
+$bg-overlay:                                                        "../img/bg-overlay.png";
+
+.overlay {
+  background-image: url($bg-overlay);
+  background-position: 0 0;
+  background-repeat: repeat;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: map-get($zindex, modal-overlay);
+  display: none;
+}
+
+.modal-conditions {
+  color: $color-primary-brand;
+  @include rem(font-size, $font-size-text-legals);
+  position: absolute;
+  top: 8030px;
+  left: 50%;
+  width: 70%;
+  margin-left: -35%;
+  padding: 60px 0 20px;
+  z-index: map-get($zindex, modal);
+  display: none;
+  .content-conditions {
+    background-color: $color-secundary-brand;
+    padding: 20px 60px 30px 20px;
+    height: 600px;
+    overflow-y: auto;
+  }
+  h2 {
+    @include rem(font-size, $font-size-title-legals);
+    margin: 0 0 25px;
+  }
+  h3 {
+    @include rem(font-size, $font-size-subtitle-legals);
+    margin: 15px 0;
+  }
+  p {
+    margin: 0 0 20px;
+  }
+  ul {
+    margin-bottom: 20px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  a {
+    color: $color-primary-brand;
+  }
+}

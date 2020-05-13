@@ -1,0 +1,555 @@
+
+/* ======================================================================
+	Layout
+======================================================================== */
+
+
+body {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.42857;
+  background-image: url("../img/bg-fichas.jpg");
+  background-position: center top;
+  background-repeat: no-repeat; }
+
+  body.no-bg {
+    background: none; }
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+h1{
+  margin: .67em 0 .20em 0;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+.img-destacada{
+  width:100%;
+}
+.img-destacada-play{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 56px;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+/* ======================================================================
+	Header
+======================================================================== */
+header {
+  background-color: #0082CA;
+  height: 49px; }
+  .header__logo {
+    float: left;
+    margin-top:14px}
+
+.lang {
+  color: #FFF;
+  font-size: 14px;
+  font-size: 0.875rem;
+  float: right;
+  position: relative;
+  margin-top: 15px; }
+  .lang span {
+    cursor: pointer;
+    background-image: url("../img/logos_iconos/icon-arrow-lang.png");
+    background-position: 100% 4px;
+    background-repeat: no-repeat;
+    padding-right: 20px; }
+  .lang a {
+    color: #000;
+    text-decoration: none; }
+    .lang a.active {
+      font-weight: 700; }
+  .lang ul {
+    position: absolute;
+    z-index: 10;
+    background-color: #FFF;
+    padding: 10px;
+    top: 34px;
+    right: -3px;
+    display: none;
+    list-style: none; }
+
+
+    /* ======================================================================
+	ESCUELA DIGITAL
+======================================================================== */
+#escuela-digital{
+  margin-bottom:20px;
+}
+.escuela-digital p{
+  font-size: 1.1rem;
+}
+.img-video-container{
+  position: relative;
+  max-height: 435px;
+  overflow: hidden;
+  margin-bottom: 35px;
+  box-shadow: 3px 4px 44px 1px rgba(148,148,148,0.37);
+  border-radius: 0.5rem;
+}
+
+    /* ======================================================================
+	SECTION TEST-AUTOEVALUACION
+======================================================================== */
+
+.test-autoevaluacion{
+  width:100vw;
+  background-color: #F7F7F7;
+}
+.mobile-icon{
+width: 40%;
+margin-left: 25%;
+margin-top: 25%;
+}
+
+.test-autoevalucion p{
+font-size:0.9rem;
+}
+.autoevaluacion-destacado {
+font-size:1.1rem;
+}
+
+
+hr {
+width: 2rem;
+background-color: #006DFF;
+height: 0.2rem;
+border: none;
+}
+.btn-acceder{
+color: #FFF;
+font-size: 0.875rem;
+text-align: center;
+text-decoration: none;
+background-color: #0082CA;
+display: block;
+margin: 10px;
+padding: 10px 15px;
+float: right;
+}
+.btn-right{
+color: #FFF;
+font-size: 0.875rem;
+text-align: center;
+text-decoration: none;
+background-color: #0082CA;
+display: block;
+margin: 10px;
+padding: 10px 15px;
+float: right;
+width: 135px;
+
+}
+
+
+/* ======================================================================
+	Programa digital
+======================================================================== */
+
+#programa-digital{
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+/* Plus befoe Digital en Pograma digital*/
+.digital:before{
+  content: url("../img/logos_iconos/masdigital.png");
+}
+#programa-digital > div.programa-digital-gallery.content > div > div > a > img {
+  width:100%;
+  -webkit-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  -moz-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  }
+
+.blocks h3 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin: 0 0 5px; }
+
+.blocks h2 + p {
+  margin-bottom: 20px; }
+
+
+.blocks__item-text{
+  min-height: 80px;
+  height: 80px;
+}
+.blocks p {
+  font-size: 0.875rem;
+  margin: 0; }
+  .blocks p.with-margin-bottom {
+    margin-bottom: 20px; }
+
+.blocks a {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: block; }
+
+.blocks__link-more {
+  text-decoration: none;
+  background-color: #0082CA;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  float: right;
+  padding: 10px 20px;
+  min-width: 120px;
+  font-size: 0.9rem;
+}
+  .blocks__link-more:hover {
+    text-decoration: underline; }
+
+.blocks__link-accede {
+  text-decoration: none;
+  color: #0082CA;
+  border: 1px solid #0082CA;
+  line-height: 20px;
+  text-align: center;
+  float: right;
+  padding: 10px 20px;
+  min-width: 120px;
+  font-size: 0.9rem;
+  margin: 0 20px;
+    }
+  .blocks__link-accede:hover {
+      text-decoration: underline; }
+
+
+.blocks__item {
+  position:relative;
+  margin-bottom: 105px;
+  padding: 10px 0 0 10px;
+}
+
+.blocks__item__info{
+  position: absolute;
+  max-width:290px;
+  bottom: -80px;
+  left: 6%;
+  width: 86%;
+  background-color: #fff;
+  font-size: .8rem;
+  padding:10px 20px;
+  min-height: 210px;
+  -webkit-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  -moz-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+}
+
+.blocks__item__info h3 {
+  margin:10px auto;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.blocks__links{
+  margin-top:25px;
+}
+
+
+
+/* ======================================================================
+	EADA
+======================================================================== */
+
+.eada{
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.eada-logo{
+  padding: 25px;
+  padding-left: 55px;
+  text-align: right;
+}
+.eada-logo img{
+  width:70%;
+}
+
+/* ======================================================================
+	EMPRESAS COLABORADORAS CAROUSEL
+======================================================================== */
+.owl-carousel{
+  width:99%;
+  padding: 24px 0 0px 15px;
+}
+
+.owl-stage-outer{
+  /* width: 90%;
+  margin: 20px auto; */
+
+  width: 90%;
+  margin: 9px auto;
+
+}
+.owl-prev{
+  position:absolute;
+  left:0;
+  top:50px;
+  margin-right:30px;
+}
+
+.owl-next{
+  position:absolute;
+  right:0;
+  top:50px;
+  margin-left:30px;
+}
+.owl-stage{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+#owl{
+  width: 4564px !important;
+}
+
+.owl-stage .owl-item img{
+  height: 60px;
+  width: auto;
+  padding: 7px;
+  margin: 0 10%;
+
+}
+#big{
+  width:auto !important;
+  /* padding: 0 15px 0 10px; */
+  padding: 0 37px 0 27px;
+}
+#size-me{
+  width:193px;
+}
+/* ======================================================================
+	DESTACADOS
+======================================================================== */
+#destacados{
+  font-size:1.2rem;
+}
+.intro{
+  margin-bottom: 20px;
+}
+.blocks__item__destacado {
+  border-top: 5px solid #fb5e0f;
+  margin-bottom: 80px;
+  margin-right:20px;
+}
+.blocks__item__destacado img{
+  width:100%;
+  -webkit-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  -moz-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+}
+
+.blocks__item__destacado-info{
+  position: absolute;
+  bottom: 40px;
+  left: 7%;
+  width: 80%;
+  background-color: #fff;
+  font-size: .9rem;
+  padding:10px 20px;
+  -webkit-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  -moz-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+}
+.blocks__item__destacado-info h4{
+  margin:0 0 10px 0;
+  font-size:1rem;
+  font-weight:600;
+}
+.destacado-label{
+background-color:#fb5e0f;
+color:#fff;
+padding:5px 10px;
+position: absolute;
+top:0;
+left:15px;
+font-size:0.9rem;
+
+}
+
+
+
+.destacados__cetificado-p{
+  font-size:1rem;
+}
+
+
+
+
+/* ======================================================================
+	DIGITLIZATE
+======================================================================== */
+#digitalizate{
+  font-size: 1.2rem;
+}
+
+.digitalizate-content{
+  padding: 0;
+  margin: 11px 11px 26px -16px;
+}
+
+.blocks__item__digitalizate{
+  margin-right:20px;
+  border:1px solid rgba(200, 200, 200,0.9);
+  min-height:360px;
+  -webkit-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  -moz-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')";
+
+}
+.blocks__item__digitalizate img{
+  width:100%;
+}
+
+.blocks__item__digitalizate-info{
+  background-color: #fff;
+  padding:0 20px;
+  min-height:120px;
+  }
+  .blocks__item__digitalizate-info h3{
+    font-size: 0.9rem;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+
+  .blocks__item__digitalizate-info p{
+    font-size: .8rem;
+  }
+
+  .blocks__item__digitalizate-nuevo {
+    border-left:1px solid rgba(200, 200, 200,0.9);
+    border-bottom:1px solid rgba(200, 200, 200,0.9);
+    border-right:1px solid rgba(200, 200, 200,0.9);
+    margin-right:20px;
+    min-height:360px;
+    -webkit-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+    -moz-box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+    box-shadow: 2px 0px 22px 3px rgba(187, 187, 187, 0.5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')";
+  }
+  .blocks__item__digitalizate-nuevo img{
+  width:100%;
+}
+
+.blocks__links__digitalizate{
+  margin-top:0;
+}
+/* ======================================================================
+	Footer
+======================================================================== */
+footer {
+  color: #999;
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 5px;
+  margin: 30px auto;
+  text-align: center;
+}
+  footer .border-line {
+    border-top: 3px solid #777;
+    width:98%;
+  }
+
+  .border-line p {
+    margin-top:20px;
+    line-height: 1;
+  }
+
+  /* ======================================================================
+	RESPONSIVE
+======================================================================== */
+
+@media (min-width: 1200px){
+  .container {
+      max-width: 1024px;
+  }
+
+}
+
+@media (max-width: 760px){
+  .blocks__item__info {
+    left:17px;
+  }
+
+  .mobile-icon {
+    width: 27%;
+    margin-left: 35%;
+    margin-top: 25%;
+  }
+  .eada-logo{
+    margin-left: 18%;
+  }
+  .programa-digital-gallery img {
+    width:95%;
+  }
+  .blocks__featured__container .blocks__item-container{
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 480px){
+  .escuela-digital p {
+    font-size: 1rem;
+}
+  .test-autoevaluacion h1 {
+    font-size: 1.5rem;
+  }
+
+  .programa-digital-gallery{
+    text-align: center;
+  }
+
+  .programa-digital-gallery .blocks__item__info {
+    left:15%;
+  }
+
+  .blocks__item{
+    padding:0;
+  }
+
+  .blocks__item__info {
+    left:3%;
+  }
+
+  .blocks__item-container {
+    margin-bottom: 10px;
+  }
+  .btn-destacados{
+    margin-right: 20px;
+  }
+
+  .btn-digitalizate{
+    margin-right: -15px;
+  }
+
+  .blocks__link-accede{
+    margin: -20px 20px 10px 0;
+  }
+
+}

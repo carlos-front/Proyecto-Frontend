@@ -1,0 +1,379 @@
+/* ======================================================================
+	Bn-big
+======================================================================== */
+
+
+$font-size-bn-big-title:                             40px;
+$font-size-bn-big-text:                              16px;
+$font-size-bn-big-sub-title:                         24px;
+$font-size-link-back:                                14px;
+$font-size-bn-big-text-formadores-internos:          18px;
+$font-size-bn-big-sub-title-formadores-internos:     27px;
+$font-size-under-bn-title:                           20px;
+$font-size-under-bn-text:                            14px;
+
+$color-border-big-img-formadores-internos:           #EDEDED;
+$rectangle-bullet:                                   "../img/rectangle-bullet.png";
+
+
+.bn-big {
+  .content {
+    padding: 0;
+  }
+  img {
+    float: left;
+  }
+  &__text {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    width: 390px;
+  }
+  h1 {
+    @include rem(font-size, $font-size-bn-big-title);
+    margin: 0 0 30px;
+  }
+  p {
+    @include rem(font-size, $font-size-bn-big-text);
+    margin: 0 0 25px;
+  }
+  &--english-library,
+  &--escuela-comercial {
+    .content {
+      border-bottom: 2px solid #000;
+      overflow: hidden;
+    }
+  }
+  &--english-library {
+    .content {
+      height: 176px;
+    }
+  }
+  &--escuela-comercial {
+    .content {
+      height: 400px;
+    }
+  }
+  &--english-library {
+    img {
+      margin-top: -70px;
+    }
+    .bn-big__text {
+      top: 80px;
+    }
+    h2 {
+      @include rem(font-size, $font-size-bn-big-sub-title);
+      font-weight: 400;
+      margin: 0;
+    }
+    h1 {
+      line-height: 1;
+    }
+  }
+  &--escuela-comercial {
+    img {
+      margin-top: 20px;
+    }
+    .bn-big__text {
+      top: 223px;
+      width: 680px;
+    }
+    h2 {
+      @include rem(font-size, $font-size-bn-big-sub-title);
+      font-weight: 400;
+      margin: 38px 0 0;
+    }
+    h1 {
+      line-height: 1;
+    }
+  }
+  &--formadores-internos {
+    margin-bottom: 35px;
+    .bn-big__text {
+      width: 420px;
+      h1 {
+        margin-bottom: 0;
+      }
+      p {
+        @include rem(font-size, $font-size-bn-big-text-formadores-internos);
+      }
+    }
+    .content {
+      border-bottom: 1px solid $color-border-big-img-formadores-internos;
+      &.no-border-bottom {
+        border-bottom: 0;
+        padding: 0 15px 20px;
+      }
+    }
+    .bn-big__sub-text {
+      h2 {
+        @include rem(font-size, $font-size-bn-big-sub-title-formadores-internos);
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 0 0 20px;
+      }
+    }
+    &.no-margin-bottom {
+      margin-bottom: 0;
+    }
+  }
+  &--escuela-tecnico-financiera {
+    margin-bottom: 35px;
+    .bn-big__text {
+      width: 510px;
+      h1 {
+        margin-bottom: 0;
+      }
+      p {
+        @include rem(font-size, $font-size-bn-big-text-formadores-internos);
+      }
+    }
+    .content {
+      border-bottom: 1px solid $color-border-big-img-formadores-internos;
+      &.no-border-bottom {
+        border-bottom: 0;
+        padding: 0 15px 20px;
+      }
+    }
+    .bn-big__sub-text {
+      h2 {
+        @include rem(font-size, $font-size-bn-big-sub-title-formadores-internos);
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 0 0 20px;
+        a {
+          font-weight: bold;
+          color: $color-third-brand;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &__watch-video-no {
+    display: block;
+    line-height: 40px;
+    img {
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+    a {
+      color: $color-third-brand;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &--escuela-management {
+    .bn-big__text {
+      width: 420px;
+    }
+  }
+  .link-back {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-link-back);
+    font-weight: 700;
+    text-decoration: none;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    z-index: 9999;
+    &:before {
+      content: '';
+      background-image: url($sprite);
+      background-position: 0 -86px;
+      background-repeat: no-repeat;
+      float: left;
+      margin-right: 6px;
+      height: 19px;
+      width: 12px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &--school {
+    margin-bottom: 35px;
+  }
+  &__link-video {
+    padding-left: 25px;
+    position: relative;
+    &:before {
+      content: '';
+      background-image: url($img-icon-play);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 4px;
+      height: 14px;
+      width: 14px;
+    }
+    a {
+      color: $color-third-brand;
+      text-decoration: none;
+    }
+  }
+  &--inner-management {
+    min-height: 435px;
+    .bn-big__text {
+      top: 55px;
+      width: 450px;
+    }
+  }
+  &--inner-management-recursos {
+    min-height: 80px;
+  }
+  &--inner-management-conocer {
+    min-height: 485px;
+  }
+  &--management-destacamos {
+    border-bottom: 1px solid $border-color-brand;
+    min-height: 180px;
+    .bn-big__text {
+      top: 68px;
+      width: 98%;
+    }
+  }
+  &--inner-destacamos {
+    .content {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 30px;
+      min-height: 435px;
+    }
+    .bn-big__text {
+      top: 68px;
+      width: 520px;
+    }
+  }
+  &--emocionate {
+    .content {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 30px;
+      min-height: 392px;
+    }
+    .bn-big__text {
+      top: 68px;
+      width: 420px;
+    }
+  }
+
+  &--inner-escuela-tecnico-financiera {
+    min-height: 370px;
+    .bn-big__text {
+      top: 55px;
+      width: 450px;
+    }
+    &--uoc, &--reto{
+      .content {
+        border-bottom: 1px solid $border-color-brand;
+        min-height: 380px;
+        margin-bottom: 30px;
+      }
+      .bn-big__text {
+        width: 460px;
+      }
+    }
+    &--reto{
+      .content {
+        min-height: 330px;
+      }
+    }
+  }
+  &--escuela-tecnico-financiera-destacamos {
+    .content {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 30px;
+      min-height: 375px;
+    }
+    .bn-big__text {
+      top: 68px;
+      width: 480px;
+    }
+  }
+  &--matematicas {
+    .content {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 30px;
+      min-height: 366px;
+    }
+    .bn-big__text {
+      top: 68px;
+      width: 480px;
+    }
+  }
+  &--ofimatica {
+    .content {
+      border-bottom: 1px solid $border-color-brand;
+      margin-bottom: 30px;
+      min-height: 340px;
+    }
+    .bn-big__text {
+      top: 68px;
+      width: 460px;
+    }
+  }
+  &--valoracion {
+    min-height: 335px;
+    .bn-big__text {
+      top: 0;
+      width: 420px;
+    }
+  }
+}
+
+.under-bn-list {
+  li {
+    background-image: url($rectangle-bullet);
+    background-position: 0 7px;
+    background-repeat: no-repeat;
+    padding-left: 28px;
+    margin-bottom: 30px;
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+  a {
+    color: $color-third-brand;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .open-blank {
+    margin-left: 5px;
+  }
+}
+
+.under-bn {
+  margin-bottom: 50px;
+  li {
+    margin-bottom: 5px;
+    p {
+      margin: 20px 0;
+    }
+  }
+  p + ul {
+    padding-top: 30px;
+  }
+  &__title {
+    border-top: 6px solid $color-third-brand;
+    p {
+      @include rem(font-size, $font-size-under-bn-title);
+      font-weight: 700;
+    }
+  }
+  &__text {
+    border-top: 3px solid $color-primary-brand;
+    p {
+      @include rem(font-size, $font-size-under-bn-text);
+    }
+  }
+}

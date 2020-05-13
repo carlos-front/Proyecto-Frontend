@@ -1,0 +1,42 @@
+/* ======================================================================
+	Intro Home Text
+======================================================================== */
+
+$font-size-intro-title:             42px;
+$font-size-intro-sub-title:         20px;
+$font-size-intro-text:              16px;
+$font-size-intro-text-note:         16px;
+
+$logo-intro-home-title:              "../img/logo-google.png";
+
+
+.intro-home-text {
+  position: absolute;
+  left: 20px;
+  //top: 20px;
+  top: -14px;
+  &__content {
+    width: 490px;
+  }
+  h1 {
+    @include rem(font-size, $font-size-intro-title);
+    background-image: url($logo-intro-home-title);
+    background-position: 100% 9px;
+    background-repeat: no-repeat;
+    //margin: 0 0 15px;
+    margin: 0;
+    padding-right: 155px;
+  }
+  h2 {
+    @include rem(font-size, $font-size-intro-sub-title);
+    margin: 0 0 5px;
+  }
+  p {
+    @include rem(font-size, $font-size-intro-text);
+    margin: 0 0 10px;
+    &.intro-home-note {
+      @include rem(font-size, $font-size-intro-text-note);
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+/* ======================================================================
+	Thanks
+======================================================================== */
+
+$font-size-thanks-title:             24px;
+$font-size-thanks-text:              16px;
+
+$icon-tick:                          "../../../srcdigital/linkedin/img/icon-tick.png";
+$icon-arroba:                        "../../../srcdigital/linkedin/img/icon-arroba.png";
+
+$border-color-link-nav:             #BBB;
+
+
+
+.thanks {
+  margin: 100px 0 60px;
+  h2 {
+    @include rem(font-size, $font-size-thanks-title);
+    margin: 0 0 20px;
+  }
+  p {
+    @include rem(font-size, $font-size-thanks-text);
+    margin: 0 0 15px;
+  }
+  &__left {
+    border-bottom: 1px solid $border-color-link-nav;
+    float: left;
+    padding-bottom: 15px;
+    width: 100%;
+    h2,
+    p {
+      padding-left: 25px;
+    }
+    h2 {
+      background-image: url($icon-tick);
+      background-position: 0 12px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.other-links {
+  float: left;
+  margin-top: 10px;
+  width: 100%;
+}

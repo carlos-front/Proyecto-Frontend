@@ -1,0 +1,149 @@
+/* ======================================================================
+	Portal
+======================================================================== */
+
+
+$font-size-portal-title:            40px;
+$font-size-portal-banner-text:      16px;
+$font-size-portal-sub-title:        18px;
+$font-size-portal-btn-enter:        14px;
+$font-size-portal-text:             14px;
+
+$color-watch-video-no:              #434343;
+
+
+.portal {
+  .content {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  &__banner {
+    border-top: 1px solid $border-color-link-nav;
+    img {
+      float: left;
+    }
+  }
+  &__banner-text {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 400px;
+    h1 {
+      @include rem(font-size, $font-size-portal-title);
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    p {
+      @include rem(font-size, $font-size-portal-banner-text);
+      margin: 0 0 12px;
+    }
+    span {
+      color: $color-third-brand;
+    }
+  }
+  &__list {
+    border-bottom: 1px solid $border-color-other-menu;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    @extend %clearfix;
+    li {
+      float: left;
+      width: 500px;
+      &.with-border {
+        border-right: 1px solid $border-color-other-menu;
+        margin: 0 10px 10px 0;
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+  &__item-list {
+    background-color: $bg-content;
+    padding: 15px;
+    @extend %clearfix;
+  }
+  &__item-list-text {
+    h2 {
+      @include rem(font-size, $font-size-portal-sub-title);
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+    img {
+      float: left;
+    }
+    p {
+      @include rem(font-size, $font-size-portal-text);
+      margin: 0 0 10px 212px;
+      float: none;
+    }
+  }
+  &__item-list-logo {
+    margin-left: 10px;
+  }
+  .btn-enter {
+    color: $color-secundary-brand;
+    @include rem(font-size, $font-size-portal-btn-enter);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: $color-third-brand;
+    display: block;
+    margin-top: 10px;
+    padding: 10px 5px;
+    float: left;
+    width: 100%;
+  }
+  &__watch-video,
+  &__watch-video-no {
+    @include rem(font-size, $font-size-portal-btn-enter);
+    font-weight: 700;
+    display: block;
+    margin: 15px;
+    img {
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+  }
+  &__watch-video {
+    color: $color-third-brand;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__watch-video-no {
+    color: $color-watch-video-no;
+  }
+  &__item-prox {
+    @include rem(font-size, $font-size-portal-btn-enter);
+    font-weight: 700;
+    background-color: $color-secundary-brand;
+    display: block;
+    margin-top: 10px;
+    padding: 6px 8px;
+    float: left;
+    width: 100%;
+    img {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+  &__suggestion {
+    @include rem(font-size, $font-size-portal-btn-enter);
+    .content {
+      background-color: $bg-content;
+      padding: 30px 25px;
+    }
+    p {
+      font-weight: 700;
+      margin: 0;
+    }
+    a {
+      color: $color-third-brand;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

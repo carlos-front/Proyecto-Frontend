@@ -1,0 +1,88 @@
+/* ======================================================================
+	Download Module
+======================================================================== */
+
+
+$font-size-title-download-module:          16px;
+$font-size-link-download:                  14px;
+
+$bg-download-module:                       #FAFAFA;
+
+$border-color-download-module:             #CDCDCD;
+
+
+
+.download-module {
+  background-color: $bg-download-module;
+  border: 1px solid $border-color-download-module;
+  margin-bottom: 15px;
+  padding: 20px 30px;
+  h3 {
+    @include rem(font-size, $font-size-title-download-module);
+    font-weight: 400;
+    margin: 0 0 15px;
+  }
+}
+
+.link-download {
+  color: $color-third-brand;
+  @include rem(font-size, $font-size-link-download);
+  font-weight: 700;
+  line-height: 25px;
+  text-decoration: none;
+  display: block;
+  &:before {
+    content: '';
+    background-image: url($sprite);
+    background-position: -45px -78px;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 6px;
+    height: 28px;
+    width: 20px;
+  }
+}
+
+.link-download-other {
+  &:before {
+    content: '';
+    background-image: url($sprite);
+    background-position: -125px -86px;
+    background-repeat: no-repeat;
+    float: right;
+    height: 19px;
+    width: 11px;
+    margin-left: 10px;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*
+.link-plus {
+  &:before {
+    content: '';
+    background-image: url($sprite);
+    background-position: -90px -86px;
+    background-repeat: no-repeat;
+    float: right;
+    height: 19px;
+    width: 11px;
+  }
+}*/
+
+.link-video {
+  color: $color-third-brand;
+  font-weight: 700;
+  line-height: 25px;
+  text-decoration: none;
+  display: inline;
+  &:hover {
+    text-decoration: underline;
+  }
+  img {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}

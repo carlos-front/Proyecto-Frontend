@@ -1,0 +1,27 @@
+/* ======================================================================
+	Buttons
+======================================================================== */
+
+
+$font-size-btn:             16px;
+
+
+
+
+.btn {
+  display: inline-block !important;
+  color: $color-secundary-brand;
+  font-size: $font-size-btn !important;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center !important;
+  background-color: $color-third-brand;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  min-width: 200px;
+  &--simple {
+    font-weight: 400;
+    text-decoration: none;
+    min-width: inherit;
+  }
+}

@@ -1,0 +1,39 @@
+/* ======================================================================
+	  Buttons
+	======================================================================== */
+
+
+$font-size-btn:                 24px;
+$font-size-btn-back:            14px;
+
+$icon-arrow-back:               "../../../srcdigital/dieta-informativa/img/icon-arrow-back.png";
+
+
+.btn {
+  color: $color-primary-brand;
+  @include rem(font-size, $font-size-btn);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $color-fourth-brand;
+  border: 0;
+  padding: 10px 15px;
+  display: inline-block;
+  @include css3(border-radius, 5px);
+}
+
+.btn-back {
+  color: #000;
+  @include rem(font-size, $font-size-btn-back);
+  text-decoration: none;
+  background-image: url($icon-arrow-back);
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  margin: 15px 0 80px 14px;
+  float: left;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,70 @@
+/* ======================================================================
+	Forms
+======================================================================== */
+
+$font-size-title-form:             24px;
+$font-size-input-form:             14px;
+$font-size-label-error:            14px;
+
+$color-label-error:                #2aff00;
+
+
+.form {
+  text-align: center;
+  position: absolute;
+  margin-left: -380px;
+  padding: 135px 0 50px;
+  left: 50%;
+  top: 4622px;
+  width: 760px;
+  &__content {
+    margin: 0 auto;
+    width: 650px;
+    @extend %clearfix;
+  }
+  h3 {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-title-form);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 25px 0 30px;
+    span {
+      color: $color-fourth-brand;
+    }
+  }
+  p {
+    @include rem(font-size, $font-size-text);
+    margin: 0;
+  }
+  a {
+    color: $color-secundary-brand;
+    text-decoration: underline;
+  }
+  &__input-box,
+  input[type="text"] {
+    text-align: left;
+  }
+  &__input-box {
+    float: left;
+    margin: 0 10px 20px;
+    width: 304px;
+  }
+  input[type="text"] {
+    background-color: $color-third-brand;
+    color: $color-primary-brand;
+    @include rem(font-size, $font-size-input-form);
+    border: 0;
+    padding: 15px;
+    width: 100%;
+  }
+  .btn {
+    cursor: pointer;
+    width: 180px;
+  }
+  label {
+    &.error {
+      color: $color-label-error;
+      @include rem(font-size, $font-size-label-error);
+    }
+  }
+}

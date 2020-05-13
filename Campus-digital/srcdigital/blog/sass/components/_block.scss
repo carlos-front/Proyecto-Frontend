@@ -1,0 +1,281 @@
+/* ======================================================================
+	  Block
+	======================================================================== */
+
+
+$font-size-text:                    14px;
+$font-size-title:                   24px;
+$font-size-subtitle:                21px;
+
+
+
+
+.block {
+  position: absolute;
+  left: 50%;
+  z-index: map-get($zindex, block-home);
+  h2 {
+    font-family: $font-family-play;
+    @include rem(font-size, $font-size-title);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h3 {
+    font-family: $font-family-play;
+    @include rem(font-size, $font-size-subtitle);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  p {
+    @include rem(font-size, $font-size-text);
+    line-height: 1.6;
+    margin: 0;
+  }
+  a {
+    color: $color-secundary-brand;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.para {
+  text-align: center;
+  margin-left: -50%;
+  width: 100%;
+  h2 {
+    margin-bottom: 140px;
+  }
+  h3 {
+    margin-bottom: 20px;
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 80px;
+    width: 320px;
+  }
+}
+
+.donde {
+  text-align: center;
+  margin-left: -50%;
+  width: 100%;
+  h2 {
+    margin-bottom: 25px;
+  }
+  p {
+    margin-bottom: 27px;
+  }
+  &__type {
+    margin-bottom: 65px;
+    @extend %clearfix;
+    li {
+      font-family: $font-family-play;
+      @include rem(font-size, 18px);
+      font-weight: 700;
+      line-height: 47px;
+      text-transform: uppercase;
+      float: left;
+      &:first-child {
+        margin-right: 110px;
+        margin-left: 306px;
+      }
+    }
+    img {
+      float: left;
+      padding-right: 10px;
+    }
+    &--small {
+      margin-bottom: 0;
+      li {
+        font-family: $font-family-base;
+        @include rem(font-size, 12px);
+        line-height: 25px;
+        &:first-child {
+          margin-right: 30px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &__list {
+    margin-left: 116px;
+    width: 778px;
+    @extend %clearfix;
+    p {
+      text-align: left;
+      margin-bottom: 10px !important;
+    }
+    > li {
+      margin-bottom: 40px;
+      float: left;
+      width: 100%;
+    }
+    &--cat {
+      .col-md-8 {
+        width: 65%;
+      }
+    }
+  }
+  &__img {
+    &--blogger {
+      img {
+        margin-top: 6px;
+      }
+    }
+    &--wordpress {
+      img {
+        margin-top: 43px;
+      }
+    }
+    &--tumblr {
+      img {
+        margin-top: 30px;
+      }
+    }
+    &--medium {
+      img {
+        margin-top: 20px;
+      }
+    }
+    &--linkedin-pulse {
+      img {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+.consejos-5 {
+  margin-left: -50%;
+  width: 100%;
+  ul {
+    margin: 0 auto;
+    width: 778px;
+  }
+  li {
+    float: left;
+    margin: 0 36px 45px 0;
+    width: 370px;
+    &.no-margin-right {
+      margin-right: 0;
+    }
+  }
+  h2 {
+    margin-bottom: 35px;
+  }
+  h3 {
+    color: $color-fourth-brand;
+    @include rem(font-size, 20px);
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+}
+
+.consejos-6 {
+  margin-left: -50%;
+  width: 100%;
+  h2 {
+    margin-bottom: 35px;
+  }
+  ul {
+    text-align: center;
+    margin: 0 auto;
+    width: 840px;
+  }
+  li {
+    font-family: $font-family-play;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 27px 40px;
+    width: 220px;
+    p {
+      @include rem(font-size, 18px);
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: left;
+    }
+  }
+  span {
+    color: $color-fourth-brand;
+    @include rem(font-size, 30px);
+    font-weight: 900;
+  }
+}
+
+.blogging {
+  margin-left: -50%;
+  width: 100%;
+  li {
+    position: absolute;
+    &.a {
+      top: 71px;
+      left: 217px;
+    }
+    &.b,
+    &.c,
+    &.d,
+    &.e,
+    &.f,
+    &.g,
+    &.h {
+      left: 675px;
+    }
+    &.b {
+      top: 194px;
+    }
+    &.c {
+      top: 242px;
+    }
+    &.d {
+      top: 308px;
+    }
+    &.e {
+      top: 417px;
+    }
+    &.f {
+      top: 532px;
+    }
+    &.g {
+      top: 605px;
+    }
+    &.h {
+      top: 662px;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 887px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+#para {
+  top: 641px;
+}
+
+#donde {
+  top: 1058px;
+}
+
+#consejos-5 {
+  top: 2060px;
+}
+
+#consejos-6 {
+  top: 2610px;
+}
+#blogging {
+  top: 3223px;
+}

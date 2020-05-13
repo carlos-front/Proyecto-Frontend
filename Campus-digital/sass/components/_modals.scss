@@ -1,0 +1,112 @@
+/* ======================================================================
+	Modal Conditions
+======================================================================== */
+
+$font-size-title-legals:                                            22px;
+$font-size-subtitle-legals:                                         18px;
+$font-size-text-legals:                                             14px;
+$font-size-close-modal:                                             30px;
+
+$font-size-title-modal:                 22px;
+$font-size-text-modal:                  16px;
+
+$bg-overlay:                                                        "../img/bg-overlay.png";
+$sprite:                                                            "../img/sprite.png";
+
+
+.overlay {
+  background-image: url($bg-overlay);
+  background-position: 0 0;
+  background-repeat: repeat;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: map-get($zindex, modal-overlay);
+  display: none;
+}
+
+.modal-conditions {
+  color: $color-primary-brand;
+  @include rem(font-size, $font-size-text-legals);
+  position: absolute;
+  top: 8030px;
+  left: 50%;
+  width: 70%;
+  margin-left: -35%;
+  padding: 60px 0 20px;
+  z-index: map-get($zindex, modal);
+  display: none;
+  .content-conditions {
+    background-color: $color-secundary-brand;
+    padding: 20px 60px 30px 20px;
+    height: 600px;
+    overflow-y: auto;
+  }
+  h2 {
+    @include rem(font-size, $font-size-title-legals);
+    margin: 0 0 25px;
+  }
+  h3 {
+    @include rem(font-size, $font-size-subtitle-legals);
+    margin: 15px 0;
+  }
+  p {
+    margin: 0 0 20px;
+  }
+  ul {
+    margin-bottom: 20px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  a {
+    color: $color-primary-brand;
+  }
+}
+
+.modal {
+  background-color: $color-secundary-brand;
+  color: $color-primary-brand;
+  @include rem(font-size, $font-size-text-modal);
+  text-align: center;
+  overflow-y: auto;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  max-height: 95%;
+  width: 860px;
+  margin-left: -430px;
+  padding: 30px 30px 20px;
+  z-index: map-get($zindex, modal);
+  display: none;
+  h1 {
+    @include rem(font-size, $font-size-title-modal);
+    margin: 0 0 8px;
+  }
+  p {
+    @include rem(font-size, $font-size-text-modal);
+    margin: 0 0 15px;
+  }
+  a {
+    color: $color-third-brand;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn-close-modal {
+  background-image: url($sprite);
+  background-position: 0 -42px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 20px;
+  width: 20px;
+}

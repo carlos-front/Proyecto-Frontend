@@ -1,0 +1,27 @@
+/* ======================================================================
+	Breadcrumb
+======================================================================== */
+
+$font-size-breadcrumb:          11px;
+
+
+.breadcrumb {
+  color: #000;
+  @include rem(font-size, $font-size-breadcrumb);
+  margin: 0;
+  padding-top: 25px;
+  @extend %clearfix;
+  padding-left: 20px;
+  li {
+    float: left;
+    margin-right: 3px;
+  }
+  a {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

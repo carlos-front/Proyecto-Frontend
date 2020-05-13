@@ -1,0 +1,44 @@
+/* ======================================================================
+	Intro Ficha Text
+======================================================================== */
+
+$font-size-ficha-title:             24px;
+$font-size-ficha-title-excep:       42px;
+$font-size-ficha-sub-title:         42px;
+$font-size-ficha-text:              16px;
+
+$logo-intro-ficha-title:            "../img/logo-google-fichas.png";
+
+
+.intro-ficha-text {
+  &__content {
+    width: 490px;
+  }
+  h1 {
+    @include rem(font-size, $font-size-ficha-title);
+    font-weight: 400;
+    background-image: url($logo-intro-ficha-title);
+    background-position: 100% 9px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 5px 100px 5px 0;
+    display: inline-block;
+  }
+  h2 {
+    @include rem(font-size, $font-size-ficha-sub-title);
+    line-height: 1;
+    margin: 0 0 5px;
+  }
+  p {
+    @include rem(font-size, $font-size-ficha-text);
+    margin: 0;
+  }
+  &.excep {
+    h1 {
+      @include rem(font-size, $font-size-ficha-title-excep);
+      font-weight: 700;
+      background-image: url($logo-intro-home-title);
+      padding: 0 160px 5px 0;
+    }
+  }
+}

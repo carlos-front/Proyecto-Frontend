@@ -1,0 +1,95 @@
+/* ======================================================================
+	Bn-big
+======================================================================== */
+
+
+$font-size-bn-big-title:            40px;
+$font-size-bn-big-text:             16px;
+$font-size-bn-big-sub-title:        24px;
+$font-size-link-back:               14px;
+
+
+.bn-big {
+  .content {
+    padding: 0;
+  }
+  img {
+    float: left;
+  }
+  &__text {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    width: 390px;
+  }
+  h1 {
+    @include rem(font-size, $font-size-bn-big-title);
+    margin: 0 0 30px;
+  }
+  p {
+    @include rem(font-size, $font-size-bn-big-text);
+    margin: 0 0 25px;
+  }
+  &--english-library,
+  &--escuela-comercial {
+    .content {
+      border-bottom: 2px solid #000;
+      overflow: hidden;
+      height: 176px;
+    }
+  }
+  &--english-library {
+    img {
+      //margin-top: -70px;
+    }
+    .bn-big__text {
+      top: 80px;
+    }
+    h2 {
+      @include rem(font-size, $font-size-bn-big-sub-title);
+      font-weight: 400;
+      margin: 0;
+    }
+    h1 {
+      line-height: 1;
+    }
+  }
+  &--escuela-comercial {
+    .bn-big__text {
+      width: 680px;
+    }
+    h2 {
+      @include rem(font-size, $font-size-bn-big-sub-title);
+      font-weight: 400;
+      margin: 38px 0 0;
+    }
+    h1 {
+      line-height: 1;
+    }
+  }
+  .link-back {
+    color: $color-third-brand;
+    @include rem(font-size, $font-size-link-back);
+    font-weight: 700;
+    text-decoration: none;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    &:before {
+      content: '';
+      background-image: url($sprite);
+      background-position: 0 -86px;
+      background-repeat: no-repeat;
+      float: left;
+      margin-right: 6px;
+      height: 19px;
+      width: 12px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &--school {
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,8 @@
+/* ======================================================================
+	  Fonts
+	======================================================================== */
+@font-face {
+  font-family: 'AbrilFatface-Regular';
+  src: url("../fonts/AbrilFatface-Regular.eot");
+  src: url("../fonts/AbrilFatface-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AbrilFatface-Regular.woff") format("woff"), url("../fonts/AbrilFatface-Regular.ttf") format("truetype"), url("../fonts/AbrilFatface-Regular.woff2") format("woff2"), url("../fonts/AbrilFatface-Regular.svg") format("svg");
+}

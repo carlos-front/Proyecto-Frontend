@@ -1,0 +1,238 @@
+/* ======================================================================
+	Modal Conditions
+======================================================================== */
+
+$font-size-title-modal:                         23px;
+$font-size-text-head-modal:                     17px;
+$font-size-sub-title-modal:                     17px;
+$font-size-text-modal:                          13px;
+$font-size-type-modal:                          13px;
+$font-size-link-acces-modal:                    18px;
+
+$color-border-info:                             #939393;
+
+$bg-overlay:                                    "../img/bg-overlay.png";
+
+.overlay {
+  background-image: url($bg-overlay);
+  background-position: 0 0;
+  background-repeat: repeat;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: map-get($zindex, modal-overlay);
+  display: none;
+}
+
+.modal {
+  background-color: $color-secundary-brand;
+  color: $color-primary-brand;
+  @include rem(font-size, $font-size-text-modal);
+  overflow-y: auto;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  max-height: 95%;
+  width: 860px;
+  margin-left: -430px;
+  padding: 30px 30px 20px;
+  z-index: map-get($zindex, modal);
+  display: none;
+  h1 {
+    @include rem(font-size, $font-size-title-modal);
+    margin: 0 0 8px;
+    &.type-a {
+      color: $color-third-brand;
+    }
+    &.type-b {
+      color: $color-fourth-brand;
+    }
+  }
+  &__header {
+    margin-bottom: 15px;
+    p {
+      @include rem(font-size, $font-size-text-head-modal);
+      margin: 0;
+    }
+  }
+  &__info {
+    border-bottom: 1px solid $color-border-info;
+    border-top: 1px solid $color-border-info;
+    margin-bottom: 15px;
+    ul {
+      padding: 15px 0;
+      @extend %clearfix;
+      li {
+        float: left;
+        margin-right: 20px;
+        width: 260px;
+        &.last {
+          text-align: right;
+          margin-right: 0;
+          width: 200px;
+        }
+        &.only-one {
+          width: 55%;
+        }
+      }
+      p {
+        @include rem(font-size, $font-size-text-modal);
+        margin: 0;
+      }
+      a {
+        color: $color-third-brand;
+        @include rem(font-size, $font-size-text-modal);
+        font-weight: 700;
+        text-decoration: none;
+        &:after {
+          content: '';
+          background-image: url($sprite);
+          background-position: -50px -40px;
+          background-repeat: no-repeat;
+          float: right;
+          margin-left: 10px;
+          height: 18px;
+          width: 18px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  h2 {
+    @include rem(font-size, $font-size-sub-title-modal);
+    margin: 0 0 5px;
+    padding: 5px 0 0;
+  }
+  p {
+    @include rem(font-size, $font-size-text-modal);
+    margin: 0 0 15px;
+  }
+  a {
+    color: $color-third-brand;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__type {
+    @include rem(font-size, $font-size-type-modal);
+    font-weight: 700;
+    margin: 5px 0;
+    float: left;
+    width: 100%;
+    &:before {
+      content: '';
+      background-image: url($sprite);
+      background-repeat: no-repeat;
+      margin: 2px 5px 0 0;
+      float: left;
+      height: 20px;
+      width: 20px;
+    }
+    &--method {
+      &:before {
+        background-position: -88px -42px;
+      }
+    }
+    &--duration {
+      &:before {
+        background-position: -120px -42px;
+      }
+    }
+  }
+  &__block {
+    ul {
+      list-style: disc;
+      padding: 0 0 0 10px;
+      margin-bottom: 10px;
+      @extend %clearfix;
+    }
+    li {
+      margin-bottom: 5px;
+      float: left;
+      width: 100%;
+      p {
+        float: left;
+        margin-bottom: 5px;
+        width: 100%;
+      }
+    }
+    img {
+      display: block;
+      float: left;
+    }
+  }
+  &__big-img-block {
+    text-align: center;
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+    img {
+      display: inline-block;
+      float: none;
+    }
+  }
+  &__link-acces {
+    color: $color-secundary-brand !important;
+    @include rem(font-size, $font-size-link-acces-modal);
+    text-align: center;
+    background-color: $color-third-brand;
+    display: block;
+    margin: 30px 0;
+    padding: 8px 5px;
+    width: 160px;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+  &--escuela {
+    border-top: 7px solid $color-fourth-brand;
+    ul {
+      list-style: none;
+      padding: 5px 0 0;
+      ul {
+        padding: 5px 10px 0 35px;
+        float: left;
+      }
+    }
+    li {
+      margin-bottom: 10px;
+      p {
+        padding-left: 19px;
+      }
+    }
+  }
+  &--video {
+    padding: 50px 30px 20px;
+  }
+  .accordion {
+    &__drop {
+      padding-left: 0;
+      padding-right: 0;
+      ul {
+        list-style: none;
+      }
+    }
+    .content {
+      padding: 0;
+      width: auto;
+    }
+  }
+}
+
+.btn-close-modal {
+  background-image: url($sprite);
+  background-position: 0 -42px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 20px;
+  width: 20px;
+}

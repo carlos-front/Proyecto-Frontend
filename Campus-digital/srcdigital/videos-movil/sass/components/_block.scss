@@ -1,0 +1,27 @@
+/* ======================================================================
+	  Block
+	======================================================================== */
+
+.marcapersonal{
+	width: 1024px;
+	height: 5698px;
+	margin: 0 auto;
+    position: relative;
+    color: #000;
+    span{
+        display: block;
+    }
+		img{
+			position: absolute;
+		}
+	*{
+		box-sizing: border-box;
+	}
+
+    .content{
+        width: 1024px;
+        margin: 0 auto;
+        position: relative;
+				padding: 0;
+		}
+}

@@ -1,0 +1,77 @@
+/* ======================================================================
+	Ficha
+======================================================================== */
+
+$font-size-ficha-title:             48px;
+$font-size-ficha-sub-title:         30px;
+$font-size-ficha-text:              18px;
+
+
+$icon-tick-redes:                   "../img/icon-tick.png";
+
+
+.intro-ficha-text {
+  h1 {
+    color: $color-blue;
+    @include rem(font-size, $font-size-ficha-title);
+    line-height: 1;
+    margin: 0 0 0 14px;
+  }
+}
+
+
+
+.ficha {
+  color: #000;
+  margin: 80px 0 50px;
+  &__left {
+    float: left;
+    margin: 0 50px 0 14px;
+    width: 642px;
+  }
+  &__right {
+    float: left;
+    width: 275px;
+    h3 {
+      border-bottom: 1px solid #000;
+      margin: 0;
+      padding: 15px 20px;
+    }
+  }
+  &__table {
+    border: 1px solid #000;
+    @include rem(font-size, $font-size-ficha-text);
+    ul {
+      padding: 40px 20px;
+    }
+    li {
+      background-image: url($icon-tick-redes);
+      background-position: 0 6px;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    h3 {
+      margin: 0 !important;
+    }
+  }
+  h2 {
+    @include rem(font-size, $font-size-ficha-sub-title);
+    margin: 0 0 20px;
+  }
+  h3 {
+    @include rem(font-size, $font-size-ficha-text);
+    margin: 0 0 20px;
+  }
+  p {
+    @include rem(font-size, $font-size-ficha-text);
+    margin: 0 0 20px;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}

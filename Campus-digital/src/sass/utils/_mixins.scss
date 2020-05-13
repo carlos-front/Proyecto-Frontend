@@ -1,0 +1,198 @@
+//#### UTILS #####
+//
+//
+// Generate a modifiers for css3 rules
+//
+// @author Alberto Córcoles
+//
+@mixin css3($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+
+
+// Convert unit px to rems
+// @author Hugo Giraudel
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+  
+  @each $value in $values {
+   
+    @if $value == 0 or $value == auto { 
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);
+      $val: parseInt($value);
+      
+      @if $unit == "px" {  
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 16 + rem));
+      }
+      
+      @if $unit == "rem" { 
+        $px : append($px,  ($val * 16 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  @if $px == $rem {     
+    #{$property}: $px;  
+  } @else {
+    #{$property}: $px;  
+    #{$property}: $rem; 
+  }
+}
+
+/**
+ *
+ * Animations are always a pain to create with all the vendor prefixes and what not.
+ * But with the help of this mixin it will boil down to just a few lines of code.
+ *
+ * @author Hugo Giraudel
+ *
+ *
+ * @param {*}   $name  - name of animation
+ *
+ *
+ */
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+@mixin animation-fill-mode($fill-mode){
+  -webkit-animation-fill-mode: $fill-mode;
+  -moz-animation-fill-mode: $fill-mode;
+  -o-animation-fill-mode: $fill-mode;
+  animation-fill-mode: $fill-mode;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin delay($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-ms-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
+
+
+// Cross browser opacity
+// This mixin ensures cross browser opacity all the way down to Internet Explorer 5.
+// Though if you have to optomize for IE5, you have a lot bigger problems than opacity, godspeed my friend.
+// url: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+// Using this mixin you can combine media queries and normal CSS image 
+// replacement to send high resolution images to retina devices and standard resolution
+// images everywhere else. At first please make a standard resolution image ex: logo.png and
+// a high resolution image ex: logo-2x.png. If it’s a retina display, add -2x after images 
+// name and set background-size.
+//
+// Please note your CSS code might be longer than you expected when it’s complied if you have many retina images.
+// If so, please avoid to use this mixin then code them in the same place.
+
+// @author Hugo Giraudel
+// @link http://www.webcreatorbox.com/en/tutorials/sass-mixin-en/
+
+
+
+@mixin imgRetina($image, $extension, $width, $height) {
+     background: url($image + '.' + $extension) no-repeat;
+     width: $width;
+     height: $height;
+     
+     @media (min--moz-device-pixel-ratio: 1.3),
+           (-o-min-device-pixel-ratio: 2.6/2),
+           (-webkit-min-device-pixel-ratio: 1.3),
+           (min-device-pixel-ratio: 1.3),
+           (min-resolution: 1.3dppx) {     
+                background-image: url($image + '-2x' + '.' + $extension) no-repeat;
+                background-size: $width $height;
+     }
+}
+
+
+// Mixin that help you to generate all fonts extensions.
+// Example of use
+// @include font-face("open_sanslight", "../fonts/OpenSans-Light-webfont", 300, normal);
+// @author javasteve99
+// @link http://codepen.io/javasteve99/pen/hDxpn
+
+// @param {*}   $font-family  - Name of font family
+// @param {*}   $file-path  - Path of fonts
+// @param {number}   $font-weight  - Weight of font 
+// @param {*}   $font-style  - Style of font
+
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+
+}
+
+
+// Mixin breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+// Mixin Placeholder
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder           {
+    @content
+  }
+  ::-moz-placeholder          {
+    @content
+  }
+  :-ms-input-placeholder      {
+    @content
+  }
+}

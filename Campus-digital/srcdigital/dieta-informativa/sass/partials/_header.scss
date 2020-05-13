@@ -1,0 +1,46 @@
+/* ======================================================================
+	Header
+======================================================================== */
+
+$font-size-lang:            14px;
+$icon-arrow-lang:           "../img/icon-arrow-lang.png";
+
+header {
+  background-color: $color-secundary-brand;
+  color: $color-third-brand;
+  height: 30px;
+  &__logo {
+    float: left;
+  }
+}
+
+.lang {
+  color: $color-third-brand;
+  @include rem(font-size, $font-size-lang);
+  float: right;
+  position: relative;
+  margin-top: 6px;
+  span {
+    cursor: pointer;
+    background-image: url($icon-arrow-lang);
+    background-position: 100% 4px;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+  }
+  a {
+    color: $color-primary-brand;
+    text-decoration: none;
+    &.active {
+      font-weight: 700;
+    }
+  }
+  ul {
+    position: absolute;
+    z-index: map-get($zindex, lang);
+    background-color: $color-third-brand;
+    padding: 10px;
+    top: 21px;
+    right: -3px;
+    display: none;
+  }
+}
