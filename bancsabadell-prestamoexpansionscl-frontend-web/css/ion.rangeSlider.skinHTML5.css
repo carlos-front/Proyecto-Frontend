@@ -1,0 +1,107 @@
+/* Ion.RangeSlider, Simple Skin
+// css version 2.0.3
+// © Denis Ineshin, 2014    https://github.com/IonDen
+// © guybowden, 2014        https://github.com/guybowden
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// Skin details */
+
+.irs {
+    height: 82px;
+}
+.irs-with-grid {
+    height: 75px;
+}
+.irs-line {
+    height: 7px; top: 33px;
+    background: #fff;
+    border: 1px solid #CCC;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+}
+    .irs-line-left {
+        height: 8px;
+    }
+    .irs-line-mid {
+        height: 8px;
+    }
+    .irs-line-right {
+        height: 8px;
+    }
+
+
+
+.irs-slider {
+    top: 28px;
+    width: 18px; height: 18px;
+    background: #009acf;
+    border-radius: 17px;
+    -moz-border-radius: 17px;
+    cursor: pointer;
+}
+
+.irs-slider.state_hover, .irs-slider:hover {
+    background: #999;
+}
+
+.irs-min, .irs-max {
+    color: #333;
+    font-size: 12px; line-height: 1.333;
+    text-shadow: none;
+    top: 29px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.irs-min {
+	left: -65px;
+	
+	}
+	
+.irs-max {
+	right: -70px;
+	
+	}
+
+
+
+.irs-from, .irs-to, .irs-single {
+    color: #000;
+    font-size: 14px; line-height: 1.333;
+    text-shadow: none;
+    padding: 2px 5px;
+    background: #fff;
+    -moz-border-radius: 4px;
+}
+
+.irs-from:after, .irs-to:after, .irs-single:after {
+    position: absolute; display: block; content: "";
+    bottom: -6px; left: 50%;
+    width: 0; height: 0;
+    margin-left: -3px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+}
+
+
+.irs-grid {
+    height: 27px;
+}
+.irs-grid-pol {
+    opacity: 0.5;
+    background: #428bca;
+}
+.irs-grid-pol.small {
+    background: #999;
+}
+
+.irs-grid-text {
+    bottom: 5px;
+    color: #99a4ac;
+}
+
+.irs-disabled {
+}
