@@ -1,0 +1,67 @@
+#website *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#website {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    width: 75%;
+    height: 100vh;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 6;
+    background: blue;
+    color: white;
+}
+
+#menu {
+    grid-column: 1 / 6;
+    background: lightblue;
+    color: black;
+    text-align: center;
+    line-height: 70px;
+}
+
+#menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#contenido {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+    background: #eee;
+}
+
+#contenido article {
+    background: #ccc;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+#lateral {
+    grid-column: 5 / 6;
+    background: orange;
+    color: white;
+    text-align: center;
+}
+
+#footer {
+    grid-column: 1 / 6;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
